@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>SkinnyFit Trial-Ending Notification Template</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            font-family: sans-serif;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],  /* iOS */
+        .x-gmail-data-detectors,    /* Gmail */
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+	    @media screen and (max-width: 480px) {
+	        /* What it does: Forces Gmail app to display email full width */
+	        div > u ~ div .gmail {
+		        min-width: 100vw;
+	        }
+		}
+
+    </style>
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+    /* What it does: Hover styles for buttons */
+    .button-td,
+    .button-a {
+        transition: all 100ms ease-in;
+    }
+    .button-td:hover,
+    .button-a:hover {
+        background: #449d44 !important;
+        border-color: #449d44 !important;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 600px) {
+
+        /* What it does: Adjust typography on small screens to improve readability */
+        .email-container p {
+            font-size: 13px !important;
+        }
+
+    }
+
+    </style>
+    <!-- Progressive Enhancements : END -->
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+<body width="100%" style="margin: 0; mso-line-height-rule: exactly;">
+    <center style="width: 100%; background: #ededed; text-align: left;">
+        <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+        <div style="max-width: 600px; margin: auto;" class="email-container">
+            <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <!-- Email Header : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+                <tr>
+                    <td style="padding: 0 0 0 10px;" width="150">
+                        <img src="http://skinnyfit.s3.amazonaws.com/images/skinnyfit_logo_200px@2x.png" width="200" height="50" alt="alt_text" border="0" style="width: 85%; height: auto;">
+                    </td>
+                    <td style="padding: 0 10px 0 0;" align="right">
+                        <p style="font-size: 13px; color: #7f8c9d;">Order Number: {orderid}</p>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Header : END -->
+
+            <!-- Email Body : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+
+                <!-- Hero Image, Flush : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff" align="center">
+                        <img src="http://skinnyfit.s3.amazonaws.com/images/email-headers/evergreen/trial-ending/love_skinnyfit_header.jpg" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; margin: auto;" class="g-img">
+                    </td>
+                </tr>
+                <!-- Hero Image, Flush : END -->
+
+                <!-- 1 Column Text BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 20px 20px 0 20px; font-family: sans-serif; font-size: 13px; line-height: 140%; text-align: center;">
+                                    <h1 style="margin: 0 0 5px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; color: #e2208e; font-weight: bold;">Thank you for ordering your 18-day trial<br />subscription of SkinnyFit!</h1>
+                                    <p style="margin: 0 0 15px 0; color: #7f8c9d;">We’re working to get your package to you quickly. Your 18-day trial period starts on the day you placed your order. After your 18-day trial period ends, do nothing and you can keep enjoying the benefits of your SkinnyFit subscription for just <strong>{nextsubscriptionamount}</strong> billed on <strong>{nextsubscriptiondate}</strong>.</p>
+
+                                    <p style="margin: 0 0 15px 0; color: #7f8c9d;">Need more time to decide? You may cancel anytime before the end of your 18-day trial period is over, and you will not be charged.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>            
+                <!-- 1 Column Text END -->
+
+                <tr>
+                    <td bgcolor="#ffffff" style="text-align: center; font-size: 14px; line-height: 140%; padding: 0 20px;">
+                        <hr style="background: #e2208e; height: 1px; border: 0; margin-top: 20px; margin-bottom: 10px;" />
+                        <p style="margin: 10px 0 0 0; color: #7f8c9d;">Order #: {orderid}</p>
+                        <p style="margin: 5px 0 0 0; color: #7f8c9d;">Date Ordered: {orderdatetime}</p>
+                        <hr style="background: #e2208e; height: 1px; border: 0; margin-top: 10px" />
+                    </td>
+                </tr>
+
+                <!--cx section-->
+                <tr>
+                    <td bgcolor="#ffffff" style="padding: 20px; font-family: sans-serif; font-size: 13px; line-height: 140%; text-align: center;">
+                        <h1 style="margin: 0 0 5px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; color: #e2208e; font-weight: bold;">Have questions or need help with your purchase?</h1>
+                        <p style="margin: 0; color: #7f8c9d;">Our SkinnyFit experts can answer any questions about your trial. We are on call 24 hours a day, 7 days a week, and respond to all questions in under an hour. If you need assistance, contact us anytime by phone or email.</p>
+                    </td>
+                </tr>
+                <!--contact info-->
+                <tr>
+                    <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
+                            <tr>
+                                <td align="center" valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="text-align: center; padding: 0 10px;">
+                                                <img src="http://skinnyfit.s3.amazonaws.com/images/body-images/detox/phone_icon.jpg" width="75" height="" alt="alt_text" border="0" align="center">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
+                                                <p style="margin: 0; color: #7f8c9d;"><strong>Phone:</strong><br /><a href="tel:18888621758" style="color: #e2208e;">1-888-862-1758</a></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="text-align: center; padding: 0 10px;">
+                                                <img src="http://skinnyfit.s3.amazonaws.com/images/body-images/detox/email_icon_v2.jpg" width="75" height="" alt="alt_text" border="0" align="center">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
+                                                <p style="margin: 0; color: #7f8c9d;"><strong>Email:</strong><br /><a href="mailto:hello@skinnyfit.com" style="color: #e2208e;">hello@skinnyfit.com</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+
+                <!--social section-->
+                <tr>
+                    <td bgcolor="#ffffff" style="padding: 10px 20px; font-family: sans-serif; font-size: 13px; line-height: 140%; text-align: center;">
+                        <hr style="background: #e2208e; height: 1px; border: 0; margin-top: 20px; margin-bottom: 10px;" />
+                        <h1 style="margin: 0 0 5px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; color: #696969; font-weight: bold; width: 100%;">Be part of the conversation</h1>
+                        <p style="margin: 0; color: #7f8c9d;">Follow us for yummy recipes, super-effective workouts and easy-to-follow health tips!</p>
+                    </td>
+                </tr>
+
+                <!-- 4 Columns : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding-bottom: 20px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
+                            <tr style="text-align: center;">
+                                <td align="center" valign="top" width="50" style="display: inline-block; margin-right: 10px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td class="stack-column-center">
+                                                <a href="https://www.skinnyfit.com/blog/" target="_blank" />
+                                                    <img src="http://skinnyfit.s3.amazonaws.com/images/body-images/detox/blog.jpg" width="50" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" width="50" style="display: inline-block; margin-right: 10px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td class="stack-column-center">
+                                                <a href="https://www.facebook.com/SkinnyFit" target="_blank">
+                                                    <img src="http://skinnyfit.s3.amazonaws.com/images/body-images/detox/facebook.jpg" width="50" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" width="50" style="display: inline-block; margin-right: 10px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td class="stack-column-center">
+                                                <a href="https://www.instagram.com/skinnyfit/" target="_blank">
+                                                    <img src="http://skinnyfit.s3.amazonaws.com/images/body-images/detox/instagram.jpg" width="50" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                 <td align="center" valign="top" width="50" style="display: inline-block;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td class="stack-column-center">
+                                                <a href="https://www.youtube.com/skinnyfit" target="_blank">
+                                                    <img src="http://skinnyfit.s3.amazonaws.com/images/body-images/detox/youtube.jpg" width="50" />
+                                                </a>  
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 4 Columns : END -->
+            </table>
+            <!-- Email Body : END -->
+
+            <!-- Email Footer : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; font-family: sans-serif; color: #888888; font-size: 13px; line-height: 140%;">
+                <tr>
+                    <td style="padding: 20px 10px; width: 100%; font-family: sans-serif; font-size: 12px; line-height: 140%; text-align: center; color: #888888;" class="x-gmail-data-detectors">
+                        <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">&copy; SkinnyFit, LLC</webversion>
+                        <br>
+                        All rights reserved.<br>11551 E. 45th Ave. Unit C, Denver, CO 80239<br>1-888-862-1758
+                        <p><a href="https://www.skinnyfit.com/terms-conditions/" style="text-decoration: underline !important;" target="_blank">Terms &amp; Conditions</a> | <a href="https://www.skinnyfit.com/privacy-policy/" style="text-decoration: underline !important;" target="_blank">Privacy Policy</a></p>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+    </center>
+</body>
+</html>
