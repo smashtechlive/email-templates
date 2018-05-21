@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	<head>
+		<meta charset="utf-8"> <!-- utf-8 works for most cases -->
+		<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+		<meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+		<title>Shopping Cart Abandonment</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+		<!-- The title tag shows in email notifications, like Android 4.4. -->
+		<!-- CSS Reset : BEGIN -->
+		<style>
+			/* What it does: Remove spaces around the email design added by some email clients. */
+			/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+			html,
+			body {
+				margin: 0 auto !important;
+				padding: 0 !important;
+				height: 100% !important;
+				width: 100% !important;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+			}
+			/* What it does: Stops email clients resizing small text. */
+			* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+			}
+			/* What it does: Centers email on Android 4.4 */
+			div[style*="margin: 16px 0"] {
+			margin: 0 !important;
+			}
+			/* What it does: Stops Outlook from adding extra spacing to tables. */
+			table,
+			td {
+			mso-table-lspace: 0pt !important;
+			mso-table-rspace: 0pt !important;
+			}
+			/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+			table {
+			border-spacing: 0 !important;
+			border-collapse: collapse !important;
+			table-layout: fixed !important;
+			margin: 0 auto !important;
+			}
+			table table table {
+			table-layout: auto;
+			}
+			/* What it does: Uses a better rendering method when resizing images in IE. */
+			img {
+			-ms-interpolation-mode:bicubic;
+			}
+			/* What it does: A work-around for email clients meddling in triggered links. */
+			*[x-apple-data-detectors],  /* iOS */
+			.x-gmail-data-detectors,    /* Gmail */
+			.x-gmail-data-detectors *,
+			.aBn {
+			border-bottom: 0 !important;
+			cursor: default !important;
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+			}
+			/* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+			.a6S {
+			display: none !important;
+			opacity: 0.01 !important;
+			}
+			/* If the above doesn't work, add a .g-img class to any image in question. */
+			img.g-img + div {
+			display: none !important;
+			}
+			/* What it does: Prevents underlining the button text in Windows 10 */
+			.button-link {
+			text-decoration: none !important;
+			}
+			/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+			/* Create one of these media queries for each additional viewport size you'd like to fix */
+			/* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+			@media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+			.email-container {
+			min-width: 375px !important;
+			}
+			}
+			@media screen and (max-width: 480px) {
+			/* What it does: Forces Gmail app to display email full width */
+				div &gt; u ~ div .gmail {
+					min-width: 100vw;
+				}
+			}
+		</style>
+		<!-- CSS Reset : END -->
+		<!-- Progressive Enhancements : BEGIN -->
+		<style>
+			/* What it does: Hover styles for buttons */
+			.button-td,
+			.button-a {
+			transition: background 100ms ease-in;
+			border-radius: 4px;
+			}
+			.button-td:hover,
+			.button-a:hover {
+			background: #449d44 !important;
+			}
+			/* Media Queries */
+			@media screen and (max-width: 600px) {
+			/* What it does: Adjust typography on small screens to improve readability */
+			.email-container p {
+			font-size: 13px !important;
+			}
+			.cta-button {
+			padding: 16px 14px !important;
+			}
+			}
+			@media screen and (max-width: 375px) {
+			.cta-button {
+			padding: 12px 8px !important;
+			font-size: 13px !important;
+			}
+			}
+			@media screen and (max-width: 320px) {
+			.cta-button {
+			padding: 12px 8px !important;
+			font-size: 12px !important;
+			}
+			.contact-section p {
+			font-size: 12px !important;
+			}
+			}
+		</style>
+		<style>
+			.group:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+			td aside {
+				padding: 30px 30px 30px 30px;
+			}
+			.col-2 {
+				float: left;
+				width: 50%;
+			}
+			.concerns {
+				width: 75%;
+				text-align: left;
+			}
+			.concerns p {
+				margin: 0;
+			}
+			.concerns img {
+				float: left;
+				padding-right: 10px;
+			}
+			.center {
+				text-align: center;
+			}
+			.label {
+				font-weight: bold;
+			}
+			.skinnypink {
+				color: rgb(231, 23, 145);
+			}
+		</style>
+		<!-- Progressive Enhancements : END -->
+		<!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+		<!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+	</head>
+	
+	<body style="background: #ccc; margin: 0; padding: 0;">
+
+		<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
+
+			<tr>
+				<td align="center" style="background: #ececec">
+
+					<img src="https://s3.amazonaws.com/skinnyfit/images/email-headers/sf_logo.png" alt="alt_text" style="width: 25%;border-width: 0px; border-style: solid;padding-top:30px" align="" class="skinnyfitlogo">
+
+					<aside style="background: #fff; margin: 10px 15px;">
+
+						<img src="http://media.lt02.net/9442/SCA%20Assets/new-sca-1/Cart%20Icon.jpg" height="50px" width="50px">
+
+						<h1><<SCA\Customer-FirstName>>, DON'T FORGET ABOUT US</h1>
+
+						<p>
+						We finally built up enough courage to send you an email. We wanted to show you how much we like you,
+						so we saved the items in your cart. We know that you + SkinnyFit is #relationship goals. We don't necessarily
+						have to go steady - just give us a shot.
+						</p>
+						
+						<<SCA\CartHTML>>
+
+						<a href="https://<<SCA\CartLink Default=''>>" class="completeOrderLink" style="color:#ffffff; text-decoration:none;display:inline-block; white-space:nowrap; padding: 15px 10px 15px 10px; background-color: #7bc142; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; border-radius: 4px; font-size: 12px; font-weight: bold; display: block; width: 200px">OK, I'M READY &raquo;</a>
+
+					</aside>
+
+				</td>
+			</tr>
+
+			<tr align="center" style="background: #ececec">
+				<td>
+
+					<aside style="background: #fff; margin: 10px 15px;" class="group">
+
+						<img src="http://media.lt02.net/9442/SCA%20Assets/new-sca-1/SF%20Heart%20Icon.jpg" width="30" height="30">
+						<p class="center">As always, if you have questions or <br /> concerns please contact us:</p>
+
+						<section class="concerns">
+
+							<div class="col-2">
+
+								<img height="50px" width="30px" src="http://media.lt02.net/9442/SCA%20Assets/new-sca-1/phone%20icon.png">
+								<p class="label">Phone:</p>
+								<p>1-888-862-1758</p>
+
+							</div>
+
+							<div class="col-2">
+
+								<img height="40px" width="40px" src="http://media.lt02.net/9442/SCA%20Assets/new-sca-1/email%20icon.png">
+								<p class="label">Email:</p>
+								<p>hello@skinnyfit.com</p>
+
+							</div>
+
+						</section>
+
+					</aside>
+
+				</td>
+			</tr>
+
+			<tr align="center" style="background: #ececec">
+
+				<td>
+
+					<aside style="background: #fff; margin: 10px 15px;">
+						
+						<p class="skinnypink" style="font-weight: bold;">Be part of the conversation</p>
+						<p>What makes you excited to try SkinnyFit? <br /> Share your comments</p>
+						<!-- <img src="http://media.lt02.net/9442/SCA%20Assets/new-sca-1/Social%20Media%20Icons.jpg" 
+						height="30px" width="140px"> -->
+
+					</aside>
+
+				</td>
+
+			</tr>
+
+			<tr>
+				<td align="center" style="background: #ececec">
+					<img src="http://media.lt02.net/9442/SCA%20Assets/new-sca-1/xoxo-skinnyfit-footer.png"
+					height="40px" width="130px" style="padding: 20px 0">
+				</td>
+			</tr>
+
+		</table>
+
+	</body>
+
+</html>
