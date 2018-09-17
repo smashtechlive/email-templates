@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>FootGod Order Confirmation Template</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            font-family: helvetica, verdana, arial, sans-serif;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],  /* iOS */
+        .x-gmail-data-detectors,    /* Gmail */
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            /* What it does: Forces Gmail app to display email full width */
+            div > u ~ div .gmail {
+                min-width: 100vw;
+            }
+        } 
+    </style>
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+    /* What it does: Hover styles for buttons */
+    .button-td,
+    .button-a {
+        transition: background 100ms ease-in;
+        border-radius: 4px;
+    }
+    .button-td:hover,
+    .button-a:hover {
+        background: #449d44 !important;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 600px) {
+
+        /* What it does: Adjust typography on small screens to improve readability */
+        .email-container p {
+            font-size: 13px !important;
+        }
+        .cta-button {
+            padding: 16px 14px !important;
+        }
+    }
+    @media screen and (max-width: 375px) {
+        .cta-button {
+            padding: 12px 8px !important;
+            font-size: 13px !important;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .cta-button {
+            padding: 12px 8px !important;
+            font-size: 12px !important;
+        }
+        .contact-section p {
+            font-size: 12px !important;
+        }
+    }   
+
+    </style>
+    <!-- Progressive Enhancements : END -->
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+<body width="100%" style="margin: 0; mso-line-height-rule: exactly;">
+    <center style="width: 100%; background: #ededed; text-align: left;">
+        <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+        <div style="max-width: 600px; margin: auto;" class="email-container">
+            <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <!-- Email Header : BEGIN -->
+            <table bgcolor="#ffffff" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px; border-bottom: solid 3px #BD892D;">
+                <tr>
+                    <td style="padding: 10px;" width="150">
+                        <img src="https://footgod.s3.amazonaws.com/images/email/footgodlogo-long.png" width="200" height="50" alt="alt_text" border="0" style="width: 100%; height: auto;">
+                    </td>
+                    <td style="padding: 0 10px 0 0;" align="right">
+                        <p style="font-size: 13px; color: #7f8c9d;">Order Number: {{orderid}}</p>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Header : END -->
+
+            <!-- Email Body : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+
+                <!-- Hero Image, Flush : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff" align="center">
+                        <img src="https://footgod.s3.amazonaws.com/images/email/order-conf/header.jpg" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; margin: auto;" class="g-img">
+                    </td>
+                </tr>
+                <!-- Hero Image, Flush : END -->
+
+                <!-- 1 Column Text + Button : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 10px; font-family: sans-serif; font-size: 13px; line-height: 140%;">
+                                    <h1 style="margin: 0 0 5px 0; font-family: sans-serif; font-size: 24px; line-height: 125%; font-weight: bold;">This is kind of a big PEEL.</h1>
+                                    <p style="margin: 0 0 15px 0; color: #7f8c9d;">Your order will ship via DHL Expedited Max Shipping. Please allow 4-6 business days to receive your package. A shipping confirmation email with your tracking number will be sent once your order leaves our warehouse.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-family: sans-serif; font-size: 15px; line-height: 140%;">
+                                    <h4 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; font-weight: bold;">Your Order Details</h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>            
+                <!-- 1 Column Text + Button : END -->
+
+                <!-- 2 Even Columns : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 0 10px 20px 10px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+                            <tr>
+                                <td align="center" valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                <p style="margin: 0; color: #7f8c9d; font-size: 13px;"><strong>Billed To:</strong><br/>
+                                                {{billingfirstname}} {{billinglastname}}<br/>
+                                                {{billingaddress}} {{billingaddress2}}<br/>
+                                                {{billingcity}}, {{billingstate}} {{billingzipcode}}<br/>
+                                                {{billingcountry}}</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="text-align: right;font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                <p style="margin: 0; color: #7f8c9d; font-size: 13px;"><strong>Shipped To:</strong><br/>
+                                                {{shippingfirstname}} {{shippinglastname}}<br/>
+                                                {{shippingaddress}} {{shippingaddress2}}<br/>
+                                                {{shippingcity}}, {{shippingstate}} {{shippingzipcode}}<br/>
+                                                {{shippingcountry}}</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Two Even Columns : END -->
+
+                <!--LL product table-->
+                <tr>
+                    <td bgcolor="#ffffff" style="padding: 0 10px 20px 10px;">
+                       <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="table608" style="mso-table-lspace:0pt;mso-table-rspace:0pt;" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="10" style="font-size:0;line-height:0;">&nbsp;
+                                                                        </td>
+                                                                </tr>                                                           
+                                                            </tbody>
+                                                        </table>
+                                                        <!--= PRODUCT GROUP (you can copy and paste the entire section to duplicate)=-->
+                                                      <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                                            <tbody>
+                                                                <tr style="background-color:#f9f9f9;">
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                                        &nbsp;&nbsp;&nbsp;Product</td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                                        Description</td>
+                                                                    <td class="wz" width="20">&nbsp;</td>   
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                                        Price</td>
+                                                                </tr>
+                                                                {{#each products}}
+                                                                <tr>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                                        <img align="middle" alt="" border="0" height="100" hspace="0" src="https://skinnyfit.s3.amazonaws.com/images/skinnyfit-{{this.productId}}.png" style="display: block;text-decoration: none;border: none; padding: 10px;" vspace="0" width="80"/></td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                                    
+                                                                        &bull; {{this.productName}} &nbsp;&nbsp;&nbsp;</td>
+                                                                    <td class="wz" width="20">&nbsp;</td>   
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                                        ${{this.productPrice}}</td>
+                                                                </tr>
+                                                                {{/each}}
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                        <!--================================ END PRODUCT GROUP =====--><!--============================ SUBTOTAL, TOTAL, VAT, ETC. ==-->
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                                            <!-- you can duplicate this group or delete it-->
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="invReg" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" width="189">&nbsp;
+                                                                        </td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        <strong>Subtotal:</strong></td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        ${{subtotal}}</td>
+                                                                    <td class="iconPdngErase" style="font-size:0;line-height:0;" width="50">&nbsp;
+                                                                        </td>   
+                                                                </tr>
+                                                                <!-- end group --><!-- you can duplicate this group or delete it-->
+                                                                <tr>
+                                                                    <td class="invReg" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" width="189">&nbsp;
+                                                                        </td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        <strong>Shipping:</strong></td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        ${{shippingprice}}</td>
+                                                                    <td class="iconPdngErase" style="font-size:0;line-height:0;" width="50">&nbsp;
+                                                                        </td>   
+                                                                </tr>
+                                                                
+                                                                {{#if coupondiscount}}
+                                                                <tr>
+                                                                    <td class="invReg" style="color: #378d37;font-family: sans-serif;font-size: 13px;text-align: center;" width="189">&nbsp;
+                                                                  </td>
+                                                                    <td class="invReg" height="25" valign="middle" width="189" align="right">
+                                                                        <span style="color: #378d37;font-family: sans-serif;font-size: 13px;text-align: right;font-weight: bold;">Coupon:</span></td>
+                                                                    <td class="invReg" height="25" valign="middle" width="189" align="right">
+                                                                        <span style="color: #378d37;font-family: sans-serif;font-size: 13px;text-align: right;">-${{coupondiscount}}</span></td>
+                                                                    <td class="iconPdngErase" style="font-size:0;line-height:0;" width="50">&nbsp;
+                                                                  </td> 
+                                                                </tr>
+                                                                {{/if}}
+                                                                
+                                                                {{#if taxprice}}
+                                                                <tr>
+                                                                    <td class="invReg" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" width="189">&nbsp;
+                                                                  </td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        <strong>Sales Tax:</strong></td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        ${{taxprice}}</td>
+                                                                    <td class="iconPdngErase" style="font-size:0;line-height:0;" width="50">&nbsp;
+                                                                  </td> 
+                                                                </tr>
+                                                                {{/if}}
+                                                                
+                                                                 {{#if `shippingexpress == "true"`}}
+                                                                <tr>
+                                                                    <td class="invReg" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" width="189">&nbsp;
+                                                                  </td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        <strong>Express Delivery:</strong></td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        ${{shippingexpressprice}}</td>
+                                                                    <td class="iconPdngErase" style="font-size:0;line-height:0;" width="50">&nbsp;
+                                                                  </td> 
+                                                                </tr>
+                                                                
+                                                                {{/if}}
+                                                                
+
+                                                                <!-- end group --><!-- you can duplicate this group or delete it-->
+                                                                <tr>
+                                                                    <td class="invReg" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" width="189">&nbsp;
+                                                                        </td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        <strong>Total:</strong></td>
+                                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: right;" valign="middle" width="189">
+                                                                        <strong>${{ordertotal}}</strong></td>
+                                                                    <td class="iconPdngErase" style="font-size:0;line-height:0;" width="50">&nbsp;
+                                                                        </td>   
+                                                                </tr>
+                                                                
+                                                                <!-- end group -->
+                                                            </tbody>
+                                                        </table>
+                                                        <!--======================= END SUBTOTAL, TOTAL, VAT. GROUP =-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td bgcolor="#ffffff" style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
+                        <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; font-weight: bold; text-align: center;">See What Other People Are Saying About FootGod</h2>
+                    </td>
+                </tr>
+                <!-- testimonial 1 -->
+                <tr>
+                    <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 0 10px 30px 10px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+                            <tr>
+                                <td align="center" valign="top" width="45%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                <img src="https://footgod.s3.amazonaws.com/images/email/order-conf/testimonial.jpg" style="width: 100%; max-width: 100%;"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" width="55%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="padding: 0 10px 0 10px;font-family: sans-serif; font-size: 13px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                <p style="margin: 0; color: #7f8c9d; font-size: 13px;">&quot;I get regular pedicures but nothing compares to Foot God! My feet feel softer than ever and I see a remarkable difference in my feet since using it! THANK YOU Foot God!&quot;<br/>
+                                                <strong>- Maya B.</strong><br/>
+                                                <span>Dallas, Texas</span><br />
+                                                <span style="color: #fdc705; font-size: 18px;">★★★★★</span></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- end testimonial 1 -->
+
+                <!-- testimonial 2 -->
+                <tr>
+                    <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 0 10px 30px 10px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
+                            <tr>
+                                <td align="center" valign="top" width="55%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="padding: 0 10px 0 10px;font-family: sans-serif; font-size: 13px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                <p style="margin: 0; color: #7f8c9d; font-size: 13px;">&quot;I thought it was worth a shot so I tried it. FOOTGOD worked so well, I got my boyfriend to try it and now he’s hooked! Really cool product guys.&quot;<br/>
+                                                <strong>- Kyla D.</strong><br/>
+                                                <span>Los Angeles, California</span><br />
+                                                <span style="color: #fdc705; font-size: 18px;">★★★★★</span></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" width="45%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                <img src="https://footgod.s3.amazonaws.com/images/email/order-conf/testimonial2.jpg" style="width: 100%; max-width: 100%;"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- end testimonial 2 -->
+
+                <!-- testimonial 3 -->
+                <tr>
+                    <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 0 10px 30px 10px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
+                            <tr>
+                                <td align="center" valign="top" width="45%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                <img src="https://footgod.s3.amazonaws.com/images/email/order-conf/testimonial3.jpg" style="width: 100%; max-width: 100%;"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" width="55%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="padding: 0 10px 0 10px;font-family: sans-serif; font-size: 13px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                <p style="margin: 0; color: #7f8c9d; font-size: 13px;">&quot;My feet peeled like a snake for 5 days or so. When it was finished my feet were smoother than the day I was born! FOOTGOD where have you been my whole life?&quot;<br/>
+                                                <strong>- James S.</strong><br/>
+                                                <span>Park City, Utah</span><br />
+                                                <span style="color: #fdc705; font-size: 18px;">★★★★★</span></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- end testimonial 3 -->
+
+                <!--cx section-->
+                <tr>
+                    <td bgcolor="#ffffff" style="padding: 10px; font-family: sans-serif; font-size: 13px; line-height: 140%; text-align: center; border-top: solid 3px #BD892D">
+                        <h1 style="margin: 0 0 5px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; font-weight: bold;">Have questions or need help with your purchase?</h1>
+                        <p style="margin: 0; color: #7f8c9d;">Our FootGod experts can answer any questions about your trial. We’re on call 24 hours a day, 7 days a week, and respond to all questions in under an hour. If you need assistance, contact us anytime by phone or email.</p>
+                    </td>                                                      
+                </tr>
+                <!--contact info-->
+                <tr>
+                    <td class="contact-section" bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
+                            <tr>
+                                <td align="center" valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td align="center" valign="top" width="45%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: right;">
+                                                    <tr>
+                                                        <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                            <img src="https://footgod.s3.amazonaws.com/images/body-images/email-icon.jpg" width="75" height="" alt="alt_text" border="0" align="center" style="display: inline-block; width: 25%;">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td align="center" valign="top" width="55%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                                    <tr>
+                                                        <td style="padding: 0 10px 10px 10px;font-family: sans-serif; font-size: 13px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                           <p style="margin: 0; color: #7f8c9d;"><strong>Phone:</strong><br/><a href="tel:18888621758" style="color: #525252;">1-888-862-1758</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td align="center" valign="top" width="5%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: right;">
+                                                    <tr>
+                                                        <td style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                            <img src="https://footgod.s3.amazonaws.com/images/body-images/phone-icon.jpg" width="75" height="" alt="alt_text" border="0" align="center" style="display: inline-block; width: 100%;">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td align="center" valign="top" width="55%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                                    <tr>
+                                                        <td style="padding: 0 10px 10px 10px;font-family: sans-serif; font-size: 13px; line-height: 140%; color: #555555;" class="stack-column-center">
+                                                           <p style="margin: 0; color: #7f8c9d;"><strong>Email:</strong><br/><a href="mailto:hello@footgod.com" style="color: #525252;">hello@footgod.com</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+            <!-- Email Body : END -->
+
+            <!-- Email Footer : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; font-family: sans-serif; color: #888888; font-size: 13px; line-height: 140%; background-image: url(https://footgod.s3.amazonaws.com/images/body-images/marble_bg.jpg)">
+                <tr>
+                    <td style="padding: 20px 10px; width: 100%; font-family: sans-serif; font-size: 12px; line-height: 140%; text-align: center; color: #888888;" class="x-gmail-data-detectors">
+                         <img src="https://footgod.s3.amazonaws.com/images/email/footgodlogo-long.png" width="200" height="50" alt="alt_text" border="0" style="width: 35%; height: auto;"><br />
+                       Copyright &copy; 2018 FootGod. All rights reserved.
+                        <br>
+                        <p><a href="https://www.skinnyfit.com/terms-conditions/" style="text-decoration: underline !important;" target="_blank">Terms &amp; Conditions</a> | <a href="https://www.skinnyfit.com/privacy-policy/" style="text-decoration: underline !important;" target="_blank">Privacy Policy</a></p>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+    </center>
+</body>
+</html>
