@@ -1,267 +1,345 @@
-<!DOCTYPE html>
+
 <html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="x-apple-disable-message-reformatting">
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Playfair+Display:800" rel="stylesheet">
-      <title>Shopping Cart Abandonment</title>
-      <style>
-         html,
-         body {
-         margin: 0 auto !important;
-         padding: 0 !important;
-         height: 100% !important;
-         width: 100% !important;
-         font-family: sans-serif;
-         }
-         * {
-         -ms-text-size-adjust: 100%;
-         -webkit-text-size-adjust: 100%;
-         }
-         div[style*="margin: 16px 0"] {
-         margin: 0 !important;
-         }
-         table,
-         td {
-         mso-table-lspace: 0pt !important;
-         mso-table-rspace: 0pt !important;
-         }
-         table {
-         border-spacing: 0 !important;
-         border-collapse: collapse !important;
-         table-layout: fixed !important;
-         margin: 0 auto !important;
-         }
-         table table table {
-         table-layout: auto;
-         }
-         img {
-         -ms-interpolation-mode:bicubic;
-         }
-         *[x-apple-data-detectors],  /* iOS */
-         .x-gmail-data-detectors,    /* Gmail */
-         .x-gmail-data-detectors *,
-         .aBn {
-         border-bottom: 0 !important;
-         cursor: default !important;
-         color: inherit !important;
-         text-decoration: none !important;
-         font-size: inherit !important;
-         font-family: inherit !important;
-         font-weight: inherit !important;
-         line-height: inherit !important;
-         }
-         .a6S {
-         display: none !important;
-         opacity: 0.01 !important;
-         }
-         img.g-img + div {
-         display: none !important;
-         }
-         /* What it does: Prevents underlining the button text in Windows 10 */
-         .button-link {
-         text-decoration: none !important;
-         }
 
-          .completeOrderLink {
-         width: 90%;
-         }
-         }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <title>Shopping Cart Abandonment</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Playfair+Display:800" rel="stylesheet">
+    <style>
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            font-family: sans-serif;
+        }
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        
+        table table table {
+            table-layout: auto;
+        }   
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        *[x-apple-data-detectors],
+        .x-gmail-data-detectors,
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        img.g-img + div {
+            display: none !important;
+        }
+        .button-link {
+            text-decoration: none !important;
+        }
+        .right-box {
+            float: right;
+            font-family: 'Open Sans', serif;
+            font-weight:light;
+        }
+        .left-box {
+            font-family: 'Open Sans', serif;
+            font-weight:light;
+        }
+
+         .assistance,
+        }
+        .browserview {
+            background: #fff;
+            float: left;
+            width: 50%;
+            text-align: center;
+            height: 40px;
+        }
+        
+        .assistance a,
+        .browserview a,
+        .assistance p,
+        .browserview p {
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .tinylinks a {
+            color: #888888 !important;
+        }
+         .button-td,
+        .button-a {
+            transition: background 100ms ease-in;
+            border-radius: 4px;
+        }
+        
+        .button-td:hover,
+        .button-a:hover {
+            background: #449d44 !important;
+        }
          .greyBackground {
-         background-image: url("http://media.lt02.net/9442/SCA_Assets_FootGod/emailbg_grey.jpg");
-         }
-         .cart-icon {
-         width: 100px;
-         position: relative;
-         top: -50px;
-         -webkit-filter: drop-shadow(1.5px 1.5px 1.5px white)
-         drop-shadow(-1.5px -1.5px -1.5px white);
-         filter: drop-shadow(1.5px 1.5px 1.5px white) 
-         drop-shadow(-1.5px -1.5px 1.5px white);
-         }
-         .convo-box{
-         background-color: #fff;
-         font-family: sans-serif;
-         font-size: 13px;
-         line-height: 140%;
-         text-align: center;
-         height: 230px;
-         border-top: solid 3px #BD892D;
-         vertical-align: top;
-         width:49%;
-         display: inline-block;
-         margin-bottom:35px;
-         }
+            background-image: url("http://media.lt02.net/9442/SCA_Assets_FootGod/emailbg_grey.jpg");
+        }
+        
+        .cart-icon {
+            width: 100px;
+            bottom: 60px;
+            position: relative;
+            -webkit-filter: drop-shadow(1.5px 1.5px 1.5px white) drop-shadow(-1.5px -1.5px -1.5px white);
+            filter: drop-shadow(1.5px 1.5px 1.5px white) drop-shadow(-1.5px -1.5px 1.5px white);
+        }
+        
+        .convo-box {
+            background-color: #fff;
+            font-family: sans-serif;
+            font-size: 13px;
+            line-height: 140%;
+            text-align: center;
+            height: 230px;
+            border-top: solid 6px #BD892D;
+            vertical-align: top;
+            width: 48%;
+            display: inline-block;
+            margin-bottom: 35px;
+        }
+        .left-box p {
+            margin: 0 0 30px 0;
+            font-size: 14px; 
+            line-height: 125%; 
+            width: 100%; 
+            font-weight:lighter;
+            color:#696969;
+        }
+        .right-box p {
+            margin: 0 auto 15px 0;
+            font-size: 14px;
+            line-height: 125%;
+            font-weight:lighter;
+            width:100%;
+        }
          .main-headline {
-         margin-top: -35px;
+            width: 94%;
+         }
+        .main-verbiage {
+           width: 91%;
+         }
+         .phone-img {
+            display: inline-block; 
+            width: 35%; 
+            text-align: right;
+         }
+        .mail-img {
+            display: inline-block; 
+            width: 35%; 
+            text-align: right;
          }
 
-         .assistance, .browserview {
-         background: #fff;
-         float: left;
-         width: 50%;
-         text-align: center;
-         height: 40px;
-         }
-         .assistance a, .browserview a, .assistance p, .browserview p {
-         color: #333;
-         font-size: 16px;
-         }
-         .tinylinks a {
-         color: #888888 !important;
-         }
-          .button-td,
-         .button-a {
-         transition: background 100ms ease-in;
-         border-radius: 4px;
-         }
-         .button-td:hover,
-         .button-a:hover {
-         background: #449d44 !important;
-         }
-         .right-box{
-            float:right;
-         }
-         /* Media Queries */
-         @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
-         .email-container {
-         min-width: 375px !important;
-         }
-         }
-         @media screen and (max-width: 480px) {
-         div &gt; u ~ div .gmail {
-         min-width: 100vw;
-         }
-         }    
-         @media screen and (max-width: 600px) {
-         .email-container p {
-         font-size: 13px !important;
-         }
-         .cta-button {
-         padding: 16px 14px !important;
-         }
-         }
-         @media screen and (max-width: 375px) {
-         .cta-button {
-         padding: 12px 8px !important;
-         font-size: 13px !important;
-         }
-         }
-         @media screen and (max-width: 320px) {
-         .cta-button {
-         padding: 12px 8px !important;
-         font-size: 12px !important;
-         }
-         .contact-section p {
-         font-size: 12px !important;
-         }
-         }
-     
-         @media (max-width: 460px) {
-         .skinnyfitlogo {
-         width: 40% !important;
-         }
-         .completeOrderLink {
-         width: 90%;
-         }
-         }
-          @media (max-width: 500px){
-         .left-box{
-            width:100%;
-            margin-bottom:35px;
-         }
-         .right-box{
-            width:100%;
-            float: none;
-         }
-         .convo-box{
-         display:table !important;
+        /* Media Queries */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+        @media screen and (max-width: 480px) {
 
-         }
-      }
-      </style>
-   </head>
-   <body>      
-      <center style="width: 100%; background: #ededed; text-align: left;">
-       
-         <div style="max-width: 600px; margin: auto; background:#000000; background-image:url(http://media.lt02.net/9442/SCA_Assets_FootGod/emailbg_grey.jpg)" class="email-container">
-            <table>
-                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
-                        <tbody>
-                           <tr>
-                              <td  style="text-align: center; padding: 10px 0 60px 0; background-color:white">
-                                 <img src="&#10;http://media.lt02.net/9442/SCA_Assets_FootGod/footgod-logo-long.png" alt="alt_text" width="199" height="72" class="footgodlogo" style="border-width: 0px; border-style: solid;" align="">
-                              </td>
-                           </tr>
-                           <tr>
-                              <td align="center">
-                                 <img src="http://media.lt02.net/9442/SCA_Assets_FootGod/cart.png" class="cart-icon" />
-                                 <h2 class="main-headline" style="font-family: 'Open Sans', sans-serif;">Joaquin, you left booties in your cart</h2>
-                                 <p style="text-align: center; color:#696969; font-weight:lighter; width:78%;">Ok, this is awkward. Your cart told us to tell you that it doesn&rsquo;t just sit around twittleing it&rsquo;s wheels all day waiting for you to decide if you want beautiful feet or not. But since it felt a special connection to you, it doesn&rsquo;t mind waiting. Do us a favor, click the link and let your cart know you feel the same about it.</p>
-                                 <p style="color:#696969;">- Thanks, The FootGod Team  </p>
-                              </td>
-                           </tr>
-                        </tbody>
-                     </table>
-                           <table>
-                           <tr>
-                              <td>
-                                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                    <tbody>
-                                       <tr>
-                                          <td align="center" style="padding: 20px 10px 10px 10px;">
-                                             <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt; background-color:#ffffff">
-                                                <tbody>
-                                                   <tr style="background-color:#EFEADF;">
-                                                      <td class="invReg" height="25" style="color: #696969;font-size: 13px;text-align: left;font-weight:bold;" valign="middle" width="189">
-                                                         &nbsp;&nbsp;&nbsp;Item
-                                                      </td>
-                                                      <td class="invReg" height="25" style="color: #696969;font-size: 13px;text-align: left;font-weight:bold;" valign="middle" width="189">
-                                                         Qty
-                                                      </td>
-                                                      <td class="wz" width="20">&nbsp;</td>
-                                                      <td class="invReg" height="25" style="color: #696969;font-size: 13px;text-align: left;font-weight:bold;" valign="middle" width="189">
-                                                         Price
-                                                      </td>
-                                                   </tr>
-                                                   <tr>
-                                                      <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
-                                                         <img align="middle" alt="" border="0" height="100" hspace="0" style="display: block;text-decoration: none;border: none; padding: 10px;" vspace="0" width="80"/>
-                                                      </td>
-                                                      <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
-                                                         &bull;  &nbsp;&nbsp;&nbsp;
-                                                      </td>
-                                                      <td class="wz" width="20">&nbsp;</td>
-                                                      <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
-                                                         $
-                                                      </td>
-                                                   </tr>
-                                                </tbody>
-                                             </table>
-                                             <table width="50%" align="center" cellpadding="0" cellspacing="0" border="0" class="completeOrderLink" style="top: 50px;">
-                                                <tbody>
-                                                   <tr>
-                                                      <td align="center" style="font-family:Arial, Helvetica, sans-serif;">
-                                                         <a href="https://<<SCA\CartLink Default=''>>" class="completeOrderLink" style="color:#ffffff; text-decoration:none; white-space:nowrap; padding:15px 10px; background-color: #7bc142; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; border-radius: 4px; font-size: 20px; font-weight: bold; display: block; margin-top: 50px;">GET FOOTGOD TODAY&raquo;</a>
-                                                      </td>
-                                                   </tr>
-                                                </tbody>
-                                             </table>
-                                          </td>
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </td>
-                           </tr>
-                        </table>
-                  
+            div &gt;
+            u ~ div .gmail {
+                min-width: 100vw;
+            }
+        }
+                
+        @media screen and (max-width: 600px) {
+            .email-container p {
+                font-size: 13px !important;
+            }
+            .cta-button {
+                padding: 16px 14px !important;
+            }
+        }
+        
+        @media screen and (max-width: 375px) {
+            .cta-button {
+                padding: 12px 8px !important;
+                font-size: 13px !important;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            .cta-button {
+                padding: 12px 8px !important;
+                font-size: 12px !important;
+            }
+            .contact-section p {
+                font-size: 12px !important;
+            }
+        }
+        @media (max-width: 460px) {
+            .skinnyfitlogo {
+                width: 40% !important;
+            }
+            .completeOrderLink {
+                width: 90%;
+            }
+        }
+           @media (max-width: 500px) {
+            .left-box {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+            .left-box p {
+                margin: 0 auto 20 auto;
+                width:90%;
+            }
+            .right-box {
+                width: 100%;
+            }
+            .right-box p {
+               margin: 0 auto 15px auto;
+               width:90%;
+            }
+            .convo-box {
+                display: table !important;
+            }
+            .main-headline {
+                width: 95%;
+            }
+            .main-verbiage {
+                width: 92%;
+            }
+            .phone-div {
+                width:56% !important;
+            }
+            .email-div {
+                width: 56% !important;
+            }
+            .phone-img {
+            padding-right: 5px;
+            }
+            .mail-img {
+            padding-right: 5px;
+            }
+        }
+    </style>
+   
 
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
+</head>
+<body>
+    <center style="width: 100%; background: #ededed; text-align: left;">
+        <div style="max-width: 600px; margin: auto; background:#000000; background-image:url(http://media.lt02.net/9442/SCA_Assets_FootGod/emailbg_grey.jpg)" class="email-container">
+            <table></table>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
                 <tbody>
                     <tr>
-                        <td align="center" style="padding: 20px 10px 10px 10px;">
+                        <td style="text-align: center; padding: 10px 0 75px 0;">
+                            <img src="&#10;http://media.lt02.net/9442/SCA_Assets_FootGod/footgod-logo-long.png" alt="alt_text" width="199" height="72" class="footgodlogo" style="border-width: 0px; border-style: solid;" align="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style=" padding: 0 20px;">
+                            <table bgcolor="#fff" width="100%">
+                                 <tbody>
+                                        <tr>
+                                          <td style="padding-bottom:50px;" align="center">
+                                             <img src="http://media.lt02.net/9442/SCA_Assets_FootGod/cart.png" class="cart-icon" />
+                                             <h2 class="main-headline" style="font-family: 'Open Sans', sans-serif; margin-top:-30px;">Joaquin, you left booties in your cart</h2>
+                                             <p class="main-verbiage" style="text-align: center; color:#696969; font-weight:lighter;">Ok, this is awkward. Your cart told us to tell you that it doesn&rsquo;t just sit around twittleing it&rsquo;s wheels all day waiting for you to decide if you want beautiful feet or not. But since it felt a special connection to you, it doesn&rsquo;t mind waiting. Do us a favor, click the link and let your cart know you feel the same about it.</p>
+                                             <p style="color:#696969;">- Thanks, The FootGod Team  </p>
+                                          </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" style="padding: 20px 20px 10px 20px;">
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt; background-color:#ffffff">
+                                                <tbody>
+                                                    <tr style="background-color:#EFEADF;">
+                                                        <td class="invReg" height="25" style="color: #696969;font-size: 13px;text-align: left; font-weight:bold;" valign="middle" width="189">
+                                                            &nbsp;&nbsp;&nbsp;Item
+                                                        </td>
+                                                        <td class="invReg" height="25" style="color: #696969;font-family: sans-serif;font-size: 13px;text-align: left;font-weight:bold;" valign="middle" width="189">
+                                                            Qty
+                                                        </td>
+                                                        <td class="wz" width="20">&nbsp;</td>
+                                                        <td class="invReg" height="25" style="color: #696969;font-family: sans-serif;font-size: 13px;text-align: left;font-weight:bold;" valign="middle" width="189">
+                                                            Price
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                            <img align="middle" alt="" border="0" height="100" hspace="0" style="display: block;text-decoration: none;border: none; padding: 10px;" vspace="0" width="80">
+                                                        </td>
+                                                        <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                            • &nbsp;&nbsp;&nbsp;
+                                                        </td>
+                                                        <td class="wz" width="20">&nbsp;</td>
+                                                        <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                            $
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                <table width="50%" align="center" cellpadding="0" cellspacing="0" border="0" class="completeOrderLink" style="top: 50px;">
+                    <tbody>
+                       <tr>
+                          <td align="center" style="font-family:Arial, Helvetica, sans-serif;">
+                             <a href="https://<<SCA\CartLink Default=''>>" class="completeOrderLink" style="color:#ffffff; text-decoration:none; white-space:nowrap; padding:15px 10px; background-color: #8d43a8; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; border-radius: 4px; font-size: 20px; font-weight: bold; display: block; margin-top: 40px;">GET FOOTGOD TODAY&raquo;</a>
+                          </td>
+                       </tr>
+                    </tbody>
+                 </table>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding: 20px 20px 10px 20px;">
                             <table>
                                 <tbody>
                                     <tr>
@@ -269,7 +347,7 @@
                                             <div class="convo-box left-box">
                                                 <h1 style="margin: 35px 0 5px 0; font-family: 'Playfair Display', serif; font-size: 22px; line-height: 125%; width: 100%;">Be part of the <br>conversation
                                                 </h1>
-                                                <p style="margin: 0 0 30px 0; font-size: 14px; line-height: 125%; width: 100%; font-weight:lighter;color:#696969;">What makes you excited to try FootGod? Share your comments!</p>
+                                                <p>What makes you excited to try FootGod? Share your comments!</p>
                                                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                                     <tbody>
                                                         <tr>
@@ -278,7 +356,7 @@
                                                                     <img src="http://media.lt02.net/9442/SCA_Assets_FootGod/fb.png" width="50">
                                                                 </a>
                                                             </td>
-                                                            <td class="stack-column-center" style="text-align:left;">
+                                                            <td class="stack-column-center">
                                                                 <a href="https://www.instagram.com/skinnyfit/" target="_blank">
                                                                     <img src="http://media.lt02.net/9442/SCA_Assets_FootGod/Ig.png" width="50">
                                                                 </a>
@@ -289,20 +367,20 @@
                                             </div>
                                             <div class="convo-box right-box" style="color:#696969;">
                                                 <img style="width:100px" src="http://media.lt02.net/9442/SCA_Assets_FootGod/footgodicon.png">
-                                                <p style="margin: 0 auto 15px 0; font-size: 14px; line-height: 125%; font-weight:lighter; width:98%;">As always, if you have questions or concerns please contact us:</p>
-                                                <div style="display: inline-block; width: 35%; text-align: right;">
+                                                <p>As always, if you have questions or concerns please contact us:</p>
+                                                <div class="phone-img">
                                                     <img style="width: 25px;" src="http://media.lt02.net/9442/SCA_Assets_FootGod/telephone.png">
                                                 </div>
-                                                <div style="display: inline-block; width: 63%; margin-bottom: 15px;">
+                                                <div class="phone-div" style="display: inline-block; width: 63%; margin-bottom: 15px;">
                                                     <p style="margin: 0 0 5px 0; font-size: 14px; line-height: 125%; text-align: left;">
                                                         <strong>Phone:</strong>
                                                         <br style="font-weight:lighter;">1-888-862-1758
                                                     </p>
                                                 </div>
-                                                <div style="display: inline-block; width: 35%; text-align: right;">
+                                                <div class="mail-img">
                                                     <img style="width: 25px; position: relative; top: -5px;" src="http://media.lt02.net/9442/SCA_Assets_FootGod/envelope.png">
                                                 </div>
-                                                <div style="display: inline-block; width: 63%;">
+                                                <div class="email-div" style="display: inline-block; width: 63%;">
                                                     <p style="margin: 0 0 5px 0; font-family: sans-serif; font-size: 14px; line-height: 125%; text-align: left;">
                                                         <strong>Email:</strong>
                                                         <br style="font-weight:lighter;">ask@footgod.com
@@ -317,26 +395,24 @@
                     </tr>
                 </tbody>
             </table>
-
-                  
-                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; font-family: sans-serif; color: #888888; font-size: 13px; line-height: 140%;">
-                        <tbody>
-                           <tr>
-                              <td style="padding: 10px; width: 100%; font-family: sans-serif; font-size: 12px; line-height: 140%; text-align: center; color: #888888;border-top: solid 2px #888888" class="x-gmail-data-detectors">
-                                 <p>
-                                    <a href="[[BrowserLink]]">View in browser</a>
-                                 </p>
-                                 <p>
-                                 </p>
-                                 <p class="tinylinks"><a href="https://www.footgod.com/terms-conditions/" style="text-decoration: underline !important;" target="_blank">Terms &amp; Conditions</a> | <a href="https://www.footgod.com/privacy-policy/" style="text-decoration: underline !important;" target="_blank">Privacy Policy</a>
-                                    | <a a="" href="[[UnsubscribeLink]]" style="text-decoration: underline !important;" target="_blank">Unsubscribe</a>
-                                 </p>
-                              </td>
-                           </tr>
-                        </tbody>
-                     </table>
-               </table>
-         </div>
-      </center>
-   </body>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; font-family: sans-serif; color: #888888; font-size: 13px; line-height: 140%;">
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px; width: 100%; font-family: sans-serif; font-size: 12px; line-height: 140%; text-align: center; color: #888888;border-top: solid 2px #888888" class="x-gmail-data-detectors">
+                            <p>
+                                <a href="[[BrowserLink]]">View in browser</a>
+                            </p>
+                            <p></p>
+                            <p class="tinylinks">
+                                <a href="https://www.footgod.com/terms-conditions/" style="text-decoration: underline !important;" target="_blank">Terms &amp; Conditions</a> |
+                                <a href="https://www.footgod.com/privacy-policy/" style="text-decoration: underline !important;" target="_blank">Privacy Policy</a> |
+                                <a a="" href="[[UnsubscribeLink]]" style="text-decoration: underline !important;" target="_blank">Unsubscribe</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </center>
+</body>
 </html>

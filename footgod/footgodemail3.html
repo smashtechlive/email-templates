@@ -117,7 +117,7 @@
             filter: drop-shadow(1.5px 1.5px 1.5px white) drop-shadow(-1.5px -1.5px 1.5px white);
         }
         
-        .convo-box {
+      .convo-box {
             background-color: #fff;
             font-family: sans-serif;
             font-size: 13px;
@@ -126,10 +126,42 @@
             height: 230px;
             border-top: solid 6px #BD892D;
             vertical-align: top;
-            width: 49%;
+            width: 48%;
             display: inline-block;
             margin-bottom: 35px;
         }
+        .left-box p {
+            margin: 0 0 30px 0;
+            font-size: 14px; 
+            line-height: 125%; 
+            width: 100%; 
+            font-weight:lighter;
+            color:#696969;
+        }
+        .right-box p {
+            margin: 0 auto 15px 0;
+            font-size: 14px;
+            line-height: 125%;
+            font-weight:lighter;
+            width:100%;
+        }
+         .main-headline {
+            width: 94%;
+         }
+        .main-verbiage {
+           width: 91%;
+         }
+         .phone-img {
+            display: inline-block; 
+            width: 35%; 
+            text-align: right;
+         }
+        .mail-img {
+            display: inline-block; 
+            width: 35%; 
+            text-align: right;
+         }
+
 
         /* Media Queries */
         @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
@@ -191,6 +223,50 @@
                 display: table !important;
             }
         }
+           @media (max-width: 500px) {
+            .left-box {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+            .left-box p {
+                margin: 0 auto 20 auto;
+                width:90%;
+            }
+            .right-box {
+                width: 100%;
+            }
+            .right-box p {
+               margin: 0 auto 15px auto;
+               width:90%;
+            }
+            .convo-box {
+                display: table !important;
+            }
+            .main-headline {
+                width: 95%;
+            }
+            .main-verbiage {
+                width: 92%;
+            }
+            .phone-div {
+                width:56% !important;
+            }
+            .email-div {
+                width: 56% !important;
+            }
+             .phone-img {
+            padding-right: 5px;
+            }
+            .mail-img {
+            padding-right: 5px;
+            }
+            .completeOrderLink{
+                font-size:13 !important;
+            }
+            .second-headline {
+                width: 90% !important;
+            }
+
     </style>
    
 
@@ -207,20 +283,20 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="center" style=" padding: 0 10px;">
+                        <td align="center" style=" padding: 0 20px;">
                             <table bgcolor="#fff" width="100%">
                                 <tbody>
                                     <tr>
                                         <td style="text-align: center;">
                                             <h2 style="margin-top:24px; font-family: 'Open Sans', serif; font-size: 22px; font-weight:bold; ">We're giving you an offer you can't refuse</h2>
-                                            <p style="text-align: center;width: 73%;margin: 0 auto; color:#696969; font-weight:lighter;">Still want to see what FootGod can do for yout? Well there’s no time like NOW. Get 20, yes, 20% off your entire order when you complete your FootGod purchase today.</p>
-                                            <p style="color:#696969; font-weight:350; margin:15px auto;width:70%;">We also have one of those Money Back Guarantee things, so if it doesn’t work out for you, we’ll just give your money back. It’s really that simple.</p>
+                                            <p class="second-headline" style="text-align: center;width: 90%;margin: 0 auto; color:#696969; font-weight:lighter;">Still want to see what FootGod can do for yout? Well there’s no time like NOW. Get 20, yes, 20% off your entire order when you complete your FootGod purchase today.</p>
+                                            <p class="second-headline" style="color:#696969; font-weight:350; margin:15px auto;width:90%;">We also have one of those Money Back Guarantee things, so if it doesn’t work out for you, we’ll just give your money back. It’s really that simple.</p>
                                             <img src="http://media.lt02.net/9442/SCA_Assets_FootGod/20percentoff.png&#10;" class="cart-icon">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td width="50%" align="center" style="font-family:Arial, Helvetica, sans-serif;">
-                                            <a href="https://&lt;&lt;SCA\CartLink Default=''&gt;&gt;" class="completeOrderLink" style="color:#ffffff;text-decoration:none;white-space:nowrap;padding:15px 10px;background-color: #7bc142;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;border-radius: 4px;font-size: 20px;font-weight: bold;display: block;/* margin-top: -150px */width: 50%;margin-bottom: 35px;margin-top: 20px;">GET FOOTGOD TODAY»</a>
+                                            <a href="https://&lt;&lt;SCA\CartLink Default=''&gt;&gt;" class="completeOrderLink" style="color:#ffffff;text-decoration:none;white-space:nowrap;padding:15px 10px;background-color: #8d43a8;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;border-radius: 4px;font-size: 20px;font-weight: bold;display: block;/* margin-top: -150px */width: 50%;margin-bottom: 35px;margin-top: 20px;">GET FOOTGOD TODAY»</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -237,7 +313,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                 <tbody>
                                     <tr>
-                                        <td align="center" style="padding: 20px 10px 10px 10px;">
+                                        <td align="center" style="padding: 20px 20px 10px 20px;">
                                             <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt; background-color:#ffffff">
                                                 <tbody>
                                                     <tr style="background-color:#EFEADF;">
@@ -274,10 +350,10 @@
                     </tr>
                 </tbody>
             </table>
-            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                     <tr>
-                        <td align="center" style="padding: 20px 10px 10px 10px;">
+                        <td align="center" style="padding: 20px 20px 10px 20px;">
                             <table>
                                 <tbody>
                                     <tr>
@@ -285,7 +361,7 @@
                                             <div class="convo-box left-box">
                                                 <h1 style="margin: 35px 0 5px 0; font-family: 'Playfair Display', serif; font-size: 22px; line-height: 125%; width: 100%;">Be part of the <br>conversation
                                                 </h1>
-                                                <p style="margin: 0 0 30px 0; font-size: 14px; line-height: 125%; width: 100%; font-weight:lighter;color:#696969;">What makes you excited to try FootGod? Share your comments!</p>
+                                                <p>What makes you excited to try FootGod? Share your comments!</p>
                                                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                                     <tbody>
                                                         <tr>
@@ -305,20 +381,20 @@
                                             </div>
                                             <div class="convo-box right-box" style="color:#696969;">
                                                 <img style="width:100px" src="http://media.lt02.net/9442/SCA_Assets_FootGod/footgodicon.png">
-                                                <p style="margin: 0 auto 15px 0; font-size: 14px; line-height: 125%; font-weight:lighter; width:98%;">As always, if you have questions or concerns please contact us:</p>
-                                                <div style="display: inline-block; width: 35%; text-align: right;">
+                                                <p>As always, if you have questions or concerns please contact us:</p>
+                                                <div class="phone-img">
                                                     <img style="width: 25px;" src="http://media.lt02.net/9442/SCA_Assets_FootGod/telephone.png">
                                                 </div>
-                                                <div style="display: inline-block; width: 63%; margin-bottom: 15px;">
+                                                <div class="phone-div" style="display: inline-block; width: 63%; margin-bottom: 15px;">
                                                     <p style="margin: 0 0 5px 0; font-size: 14px; line-height: 125%; text-align: left;">
                                                         <strong>Phone:</strong>
                                                         <br style="font-weight:lighter;">1-888-862-1758
                                                     </p>
                                                 </div>
-                                                <div style="display: inline-block; width: 35%; text-align: right;">
+                                                <div class="mail-img">
                                                     <img style="width: 25px; position: relative; top: -5px;" src="http://media.lt02.net/9442/SCA_Assets_FootGod/envelope.png">
                                                 </div>
-                                                <div style="display: inline-block; width: 63%;">
+                                                <div class="email-div" style="display: inline-block; width: 63%;">
                                                     <p style="margin: 0 0 5px 0; font-family: sans-serif; font-size: 14px; line-height: 125%; text-align: left;">
                                                         <strong>Email:</strong>
                                                         <br style="font-weight:lighter;">ask@footgod.com
