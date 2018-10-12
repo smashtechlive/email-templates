@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>SkinnyFit Shipping Confirmation Template</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            font-family: sans-serif;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],  /* iOS */
+        .x-gmail-data-detectors,    /* Gmail */
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+	    @media screen and (max-width: 480px) {
+	        /* What it does: Forces Gmail app to display email full width */
+	        div > u ~ div .gmail {
+		        min-width: 100vw;
+	        }
+		}
+
+    </style>
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+    /* What it does: Hover styles for buttons */
+    .button-td,
+    .button-a {
+        transition: all 100ms ease-in;
+    }
+    .button-td:hover,
+    .button-a:hover {
+        background: #449d44 !important;
+        border-color: #449d44 !important;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 600px) {
+
+        /* What it does: Adjust typography on small screens to improve readability */
+        .email-container p {
+            font-size: 13px !important;
+        }
+
+    }
+
+    </style>
+    <!-- Progressive Enhancements : END -->
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+<body width="100%" style="margin: 0; mso-line-height-rule: exactly;">
+    <center style="width: 100%; background: #ededed; text-align: left;">
+        <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+        <div style="max-width: 600px; margin: auto;" class="email-container">
+            <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <!-- Email Header : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+                <tr>
+                    <td style="padding: 0; text-align: center;">
+                        <img src="http://skinnyfit.s3.amazonaws.com/images/skinnyfit_logo_200px@2x.png" width="200" height="50" alt="alt_text" border="0" style="width: 25%; height: auto;">
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Header : END -->
+
+            <!-- Email Body : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+
+                 
+                <!-- Hero Image, Flush : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff" align="center">
+                        <img src="https://skinnyfit.s3.amazonaws.com/images/email-headers/evergreen/shipping/SF_Email_Header_SuperYouth.jpg" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; margin: auto;" class="g-img">
+                    </td>
+                </tr>
+                <!-- Hero Image, Flush : END -->
+
+                <!-- 1 Column Text + Button : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 30px 10px 10px 10px; font-family: sans-serif; font-size: 14px; line-height: 140%;color: #7f8c9d;">
+                                    <p style="margin: 0 0 10px 0;">Hey {{shippingfirstname}},</p>
+                                    <p style="margin: 0 0 10px 0;">A quick update on your SkinnyFit Super Youth order:</p>
+                                    <p style="margin: 0 0 10px 0;">Thousands of women are loving Super Youth and the demand has been so high that we are running a bit behind. Your customer experience is of the utmost importance to us and we’re working tirelessly to get your order out to you.</p>
+                                    <p style="margin: 0 0 10px 0;">No need to worry, we’ll be ready to ship soon, and we’re here to help you with any questions you may have regarding your order.</p>
+                                    <p style="margin: 0 0 10px 0;">XOXO,<br />SkinnyFit Customer Success<br />
+                                    <a href="" style="color: #e2208e;">hello@skinnyfit.com</a>
+                                    <br />
+                                    1-888-862-1758
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>            
+                <!-- 1 Column Text + Button : END -->
+
+               
+            </table>
+            <!-- Email Body : END -->
+
+            <!-- Email Footer : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; font-family: sans-serif; color: #888888; font-size: 13px; line-height: 140%;">
+                <tr>
+                    <td style="padding: 20px 10px; width: 100%; font-family: sans-serif; font-size: 12px; line-height: 140%; text-align: center; color: #888888;" class="x-gmail-data-detectors">
+                        <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">&copy; SkinnyFit, LLC</webversion>
+                        <br>
+                        All rights reserved.<br>11551 E. 45th Ave. Unit C, Denver, CO 80239<br>1-888-862-1758
+                        <p><a href="https://www.skinnyfit.com/terms-conditions/" style="text-decoration: underline !important;" target="_blank">Terms &amp; Conditions</a> | <a href="https://www.skinnyfit.com/privacy-policy/" style="text-decoration: underline !important;" target="_blank">Privacy Policy</a></p>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+    </center>
+</body>
+</html>
