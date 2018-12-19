@@ -1,0 +1,404 @@
+<meta charset="utf-8" />
+<!-- utf-8 works for most cases -->
+<meta content="width=device-width" name="viewport" />
+<!-- Forcing initial-scale shouldnt be necessary -->
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<!-- Use the latest (edge) version of IE rendering engine -->
+<meta name="x-apple-disable-message-reformatting" />
+<!-- Disable auto-scale in iOS 10 Mail entirely -->
+<title></title>
+<!-- The title tag shows in email notifications, like Android 4.4. --><!-- CSS Reset : BEGIN -->
+<style type="text/css">
+/* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            font-family: helvetica, verdana, arial, sans-serif;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],  /* iOS */
+        .x-gmail-data-detectors,    /* Gmail */
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* If the above doesnt work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size youd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            /* What it does: Forces Gmail app to display email full width */
+            div > u ~ div .gmail {
+                min-width: 100vw;
+            }
+        }</style>
+<!-- CSS Reset : END --><!-- Progressive Enhancements : BEGIN -->
+<style type="text/css">
+/* What it does: Hover styles for buttons */
+    .button-td,
+    .button-a {
+        transition: all 100ms ease-in;
+    }
+    .button-td:hover,
+    .button-a:hover {
+        background: #75368D !important;
+        border-color: #75368D !important;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 600px) {
+
+        /* What it does: Adjust typography on small screens to improve readability */
+        .email-container p {
+            font-size: 13px !important;
+        }
+
+    }</style>
+<!-- Progressive Enhancements : END --><!-- What it does: Makes background images in 72ppi Outlook render at correct size. --><!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+<center style="width: 100%; background: #ededed; text-align: left;">
+    <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+    <div class="email-container" style="max-width: 600px; margin: auto;">
+        <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]--><!-- Email Header : BEGIN -->
+        <table align="center" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 600px;" width="100%">
+            <tbody>
+                <tr>
+                    <td style="padding: 10px;" width="150">
+                        <img alt="alt_text" border="0" height="50" src="https://footgod.s3.amazonaws.com/images/email/footgod-logo.png" style="width: 100%; height: auto;" width="200" /></td>
+                    <td align="right" style="padding: 0 10px 0 0;">
+                        <p style="font-size: 13px; color: ##FFC80A;">
+                            Tracking Number: {trackingnumber}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Email Header : END --><!-- Email Body : BEGIN -->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 600px;" width="100%">
+            <!-- Hero Image, Flush : BEGIN -->
+            <tbody>
+                <tr>
+                    <td align="center" bgcolor="#ffffff">
+                        <img align="center" alt="alt_text" border="0" class="g-img" height="" src="https://footgod.s3.amazonaws.com/images/email/headers/shipping.jpg" style="border-top: solid 3px #BD892D; width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; margin: auto;" width="600" /></td>
+                </tr>
+                <!-- Hero Image, Flush : END --><!-- 1 Column Text + Button : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                        <tr style="padding: 10px; font-family: sans-serif; font-size: 13px; line-height: 140%;">
+                                     <h1 style="margin: 10px 10px 10px 10px; font-size: 18px; line-height: 125%; font-weight: bold;">
+                                            Get excited, you should be peeling good about this.</h1>
+                                        <p style="margin: 10px 35px 20px 10px; color: ##FFC80A;">
+                                            You can expect to receive your order in 4-6 business days. No need to stalk the mail carrier, you can use the following link to Track Your Package.</p>
+              </tr>
+                                <tr>
+                                    <td style="padding: 0 10px; font-size: 15px; line-height: 140%;">
+                                        <!-- Button : BEGIN -->
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 !important;">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="button-td" style="border-radius: 3px; background: #FFC80A; text-align: center;">
+                                                        <a class="button-a" href="https://tools.usps.com/go/TrackConfirmAction?tLabels=" style="background: #FFC80A; border: 15px solid #FFC80A; font-family: sans-serif; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 4px; font-weight: bold; font-size: 15px;" target="_blank"> <span class="button-link" style="color:#696969;">&nbsp;&nbsp;&nbsp;&nbsp;Track your package &raquo;&nbsp;&nbsp;&nbsp;&nbsp;</span> </a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- Button : END --></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 0 10px 10px;font-size: 14px; line-height: 140%;">
+                                        <p style="margin: 5px 0 0 0; color: ;">
+                                            Tracking number: {trackingnumber}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
+                                        <h2 style="margin: 0 0 10px 0;font-size: 18px; line-height: 125%; font-weight: bold;">
+                                            Here is what we shipped:</h2>
+                                        <tr>
+                                            <td style="padding: 10px;width:50%;">
+                                                <p style="margin: 0; color: #7f8c9d; font-size: 15px;">
+                                            Order Number: {orderid}</p>
+                                            </td>
+                                            <td style="padding: 10px;width:50%;text-align:right;">
+                                                <p style="margin: 0; color: #7f8c9d; font-size: 15px;">
+                                                Order Date: {orderdatetime}</p>
+                                            </td>
+                                        </tr>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text + Button : END --><!--LL product table-->
+                <tr>
+                    <td bgcolor="#ffffff" style="padding: 0 10px 20px 10px;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:580px;" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="10" style="font-size:0;line-height:0;">
+                                                        &nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--= PRODUCT GROUP (you can copy and paste the entire section to duplicate)=-->
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                            <tbody>
+                                                <tr style="background-color:#f9f9f9;">
+                                                    <td class="invReg" height="25" style="color: #696969;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                        &nbsp;&nbsp;&nbsp;Item</td>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" valign="middle" width="100%">
+                                                    <!--     Description</td>
+                                                    <td class="wz" width="20">
+                                                        &nbsp;</td>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" valign="middle" width="189">
+                                                        Qty</td> -->
+                                                    <td class="wz" width="20">
+                                                        &nbsp;</td>
+                                                    <!--<td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                        Price</td>-->
+                                                </tr>
+                                                <!--
+                                                {tpl_product_row}
+                                                <tr style="background-color:#f4f4f4;">
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
+                                                        <img align="middle" alt="" border="0" height="100" hspace="0" src="https://skinnyfit.s3.amazonaws.com/images/skinnyfit-{tpl_product_id}.png" style="display: block;text-decoration: none;border: none; padding: 10px;" vspace="0" width="80" /></td>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" valign="middle" width="189">
+                                                    
+                                                        &bull; {tpl_product_name}&nbsp;&nbsp;&nbsp;</td>
+                                                    <td class="wz" width="20">&nbsp;</td>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" valign="middle" width="189">
+                                                        {tpl_product_quantity}</td>
+                                                    <td class="wz" width="20">&nbsp;</td>   
+                                                </tr>
+                                                {tpl_product_row} 
+                                                -->
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 2 Even Columns : BEGIN -->
+                <tr>
+                    <td align="center" bgcolor="#ffffff" height="100%" style="padding: 0 10px 20px 10px;" valign="top" width="100%">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:560px;" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td align="center" valign="top" width="50%">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size: 14px;text-align: left;" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="stack-column-center" style="font-size: 15px; line-height: 140%; color: #555555;">
+                                                      <p style="margin: 0; color: #7f8c9d; font-size: 13px;">
+                                                        Shipping Carrier Info<br />
+                                                        Shipped Via DHL Expedited Max Shipping
+                                                    </p>
+                                                    <br>
+                                                        <p style="margin: 0; color: #7f8c9d; font-size: 13px;">
+                                                            <strong>Sent To:</strong><br />
+                                                            {shippingfirstname} {shippinglastname}<br />
+                                                            {shippingaddress} {shippingaddress2}<br />
+                                                            {shippingcity}, {shippingstate} {shippingzipcode}<br />
+                                                            {shippingcountry}</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Two Even Columns : END --><!--cx section-->
+                <tr>
+                    <td bgcolor="#ffffff" style="padding: 10px; padding-bottom:20px;font-family: sans-serif; font-size: 13px; line-height: 140%; text-align: center; border-top: solid 3px #BD892D">
+                        <h1 style="margin: 25 0 5px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; font-weight: bold;">
+                            Have questions or need help with your purchase?</h1>
+                        <p style="margin: 0; color: #7f8c9d;">
+                            Our FootGod experts can answer any questions about your trial. We are on call 24 hours a day, 7 days a week, and respond to all questions in under an hour. If you need assistance, contact us anytime by phone or email.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#ffffff" class="contact-section" height="100%" valign="top" width="100%" style="padding-top:20px; padding-bottom: 30px">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:560px;" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td align="center" valign="top" width="50%">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size: 14px;text-align: left;" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" valign="top" width="45%">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size: 14px;text-align: right;" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="stack-column-center" style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
+                                                                        <img align="center" alt="alt_text" border="0" height="" src="https://footgod.s3.amazonaws.com/images/body-images/phone-icon.jpg" style="display: inline-block; width: 25%;" width="75" /></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td align="center" valign="top" width="55%">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size: 14px;text-align: left;" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="stack-column-center" style="padding: 0 10px 10px 10px;font-family: sans-serif; font-size: 13px; line-height: 140%; color: #555555;">
+                                                                        <p style="margin: 0; color: #7f8c9d;">
+                                                                            <strong>Phone:</strong><br />
+                                                                            <a href="tel:18888621758" style="color: #525252;">1-888-862-1758</a></p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td align="center" valign="top" width="50%">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size: 14px;text-align: left;" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" valign="top" width="5%">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size: 14px;text-align: right;" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="stack-column-center" style="font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
+                                                                        <img align="center" alt="alt_text" border="0" height="" src="https://footgod.s3.amazonaws.com/images/body-images/email-icon.jpg" style="display: inline-block; width: 170%;" width="75" /></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td align="center" valign="top" width="55%">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size: 14px;text-align: left;" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="stack-column-center" style="padding: 0 10px 10px 25px;font-family: sans-serif; font-size: 13px; line-height: 140%; color: #555555;">
+                                                                        <p style="margin: 0; color: #7f8c9d;">
+                                                                            <strong>Email:</strong><br />
+                                                                            <a href="mailto:hello@footgod.com" style="color: #525252;">hello@footgod.com</a></p>
+                                                                        <a href="mailto:hello@footgod.com" style="color: #525252;"> </a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Email Body : END --><!-- Email Footer : BEGIN -->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 680px; font-family: sans-serif; color: #888888; font-size: 13px; line-height: 140%; background-image: url(https://footgod.s3.amazonaws.com/images/body-images/marble_bg.jpg)" width="100%">
+            <tbody>
+                <tr>
+                    <td class="x-gmail-data-detectors" style="padding: 20px 10px; width: 100%; font-family: sans-serif; font-size: 12px; line-height: 140%; text-align: center; color: #888888;">
+                        <img alt="alt_text" border="0" height="50" src="https://footgod.s3.amazonaws.com/images/email/footgod-logo.png" style="width: 35%; height: auto;" width="200" /><br />
+                        Copyright &copy; 2018 FootGod. All rights reserved.<br />
+                        <p>
+                            <a href="https://www.skinnyfit.com/terms-conditions/" style="text-decoration: underline !important;" target="_blank">Terms &amp; Conditions</a> | <a href="https://www.skinnyfit.com/privacy-policy/" style="text-decoration: underline !important;" target="_blank">Privacy Policy</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Email Footer : END --><!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]--></div>
+</center>
+<p>
+    &nbsp;</p>

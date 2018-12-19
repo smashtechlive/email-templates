@@ -113,8 +113,8 @@
     }
     .button-td:hover,
     .button-a:hover {
-        background: #75368D !important;
-        border-color: #75368D !important;
+        background: #E6B303 !important;
+        border-color: #E6B303 !important;
     }
 
     /* Media Queries */
@@ -173,7 +173,7 @@
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                     <td bgcolor="#ffffff" align="center">
-                        <img src="https://footgod.s3.amazonaws.com/images/email/shipping/shipping-header.jpg" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; margin: auto;" class="g-img">
+                        <img src="https://footgod.s3.amazonaws.com/images/email/headers/shipping.jpg" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; margin: auto;" class="g-img">
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
@@ -185,7 +185,7 @@
                             <tr>
                                 <td style="padding: 10px; font-family: sans-serif; font-size: 13px; line-height: 140%;">
                                     <h1 style="margin: 0 0 5px 0; font-size: 18px; line-height: 125%; font-weight: bold;">Get excited, you should be peeling good about this.</h1>
-                                    <p style="margin: 0; color: #7f8c9d;">You can expect to receive your order in 4-6 business days. No need to stalk the mail carrier, you can use the following link to Track Your Package.</p>
+                                    <p style="margin: 0 0 10px 0; color: #7f8c9d;">You can expect to receive your order in 4-6 business days. No need to stalk the mail carrier, you can use the following link to <a href="https://tools.usps.com/go/TrackConfirmAction?tLabels=" style="text-decoration: underline; color: #7f8c9d;">track your package</a>.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -194,8 +194,8 @@
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 !important;">
                                         <tr>
                                             <td style="border-radius: 3px; background: #FFC80A; text-align: center;" class="button-td">
-                                                <a href="https://tools.usps.com/go/TrackConfirmAction?tLabels=" style="background: #8D43A8; border: 15px solid #8D43A8; font-family: sans-serif; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 4px; font-weight: bold; font-size: 15px;" class="button-a" target="_blank">
-                                                    <span style="color:#fff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;Track your package &raquo;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                <a href="https://tools.usps.com/go/TrackConfirmAction?tLabels=" style="background: #FFC80A; border: 15px solid #FFC80A; font-family: sans-serif; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 4px; font-weight: bold; font-size: 15px;" class="button-a" target="_blank">
+                                                    <span style="color: #696969;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;Track your package &raquo;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                                 </a>
                                             </td>
                                         </tr>
@@ -205,13 +205,13 @@
                             </tr>
                             <tr>
                                 <td style="padding: 5px 0 10px 10px;font-size: 14px; line-height: 140%;">
-                                    <p style="margin: 5px 0 0 0; color: #7f8c9d;">Tracking number: {trackingnumber}</p>
+                                    <p style="margin: 10px 0 0 0; color: #7f8c9d;">Tracking number: {trackingnumber}</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="padding: 10px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
                                     <h2 style="margin: 0 0 10px 0;font-size: 18px; line-height: 125%; font-weight: bold;">Here is what we shipped:</h2>
-                                     <p style="margin: 0; color: #7f8c9d;">Order Number: {{orderid}}</p>
+                                     <p style="margin: 0; color: #7f8c9d; ont-size: 15px;">Order Number: {orderid}</p>
                                 </td>
                             </tr>
                         </table>
@@ -235,32 +235,26 @@
                                             </tbody>
                                         </table>
                                         <!--= PRODUCT GROUP (you can copy and paste the entire section to duplicate)=-->
-                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt; width: 100%;">
                                             <tbody>
                                                 <tr style="background-color:#f9f9f9;">
-                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
-                                                        &nbsp;&nbsp;&nbsp;Product</td>
-                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" valign="middle" width="189">
-                                                        Description</td>
-                                                    <td class="wz" width="20">&nbsp;</td>
-                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" valign="middle" width="189">
-                                                        Qty</td>
-                                                    <td class="wz" width="20">&nbsp;</td>
-                                                    <!--<td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
-                                                        Price</td>-->
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left; width: 100%" valign="middle">
+                                                        &nbsp;&nbsp;&nbsp;Item</td>
                                                 </tr>
+                                            </tbody>
+                                        </table>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt; width: 100%;">
+                                            <tbody>
                                                 <!--
                                                 {tpl_product_row}
-                                                <tr style="background-color:#f4f4f4;">
-                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="189">
-                                                        <img align="middle" alt="" border="0" height="100" hspace="0" src="https://skinnyfit.s3.amazonaws.com/images/skinnyfit-{tpl_product_id}.png" style="display: block;text-decoration: none;border: none; padding: 10px;" vspace="0" width="80" /></td>
-                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" valign="middle" width="189">
-                                                    
-                                                        &bull; {tpl_product_name}&nbsp;&nbsp;&nbsp;</td>
-                                                    <td class="wz" width="20">&nbsp;</td>
-                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: center;" valign="middle" width="189">
-                                                        {tpl_product_quantity}</td>
-                                                    <td class="wz" width="20">&nbsp;</td>   
+                                                <tr>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="100">
+                                                        <img align="middle" alt="" border="0" height="100" hspace="0" src="https://footgod.s3.amazonaws.com/images/ll-products/footgod-{tpl_product_id}.jpg" style="display: block;text-decoration: none;border: none; padding: 10px 0 0 0;" vspace="0"/>
+                                                    </td>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;" valign="middle">
+                                                        <p style="margin-bottom: 20px; font-size: 15px;">{tpl_product_name}</p>
+                                                        <p style="font-size: 15px;">Qty: {tpl_product_quantity}</p>
+                                                    </td>
                                                 </tr>
                                                 {tpl_product_row} 
                                                 -->
@@ -282,8 +276,6 @@
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
                                         <tr>
                                             <td style="font-size: 15px; line-height: 140%; color: #555555;" class="stack-column-center">
-                                                <p style="padding: 0 0 10px 0; margin: 0; color: #7f8c9d; font-size: 13px;"><strong>Shpping Carrier Info</strong><br />
-                                                Shipped via DHL Expedited Max Shipping</p>
                                                 <p style="margin: 0; color: #7f8c9d; font-size: 13px;"><strong>Sent To:</strong><br />
                                                 {shippingfirstname} {shippinglastname}<br />
                                                 {shippingaddress} {shippingaddress2}<br />
@@ -303,7 +295,7 @@
                 <tr>
                     <td bgcolor="#ffffff" style="padding: 10px; font-family: sans-serif; font-size: 13px; line-height: 140%; text-align: center; border-top: solid 3px #BD892D">
                         <h1 style="margin: 0 0 5px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; font-weight: bold;">Have questions or need help with your purchase?</h1>
-                        <p style="margin: 0; color: #7f8c9d;">Our FootGod experts can answer any questions about your trial. We’re on call 24 hours a day, 7 days a week, and respond to all questions in under an hour. If you need assistance, contact us anytime by phone or email.</p>
+                        <p style="margin: 0; color: #7f8c9d;">Our FootGod experts can answer any questions about your trial. We are on call 24 hours a day, 7 days a week, and respond to all questions in under an hour. If you need assistance, contact us anytime by phone or email.</p>
                     </td>                                                      
                 </tr>
 
