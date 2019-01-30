@@ -107,11 +107,9 @@
     <style>
 
     /* What it does: Hover styles for buttons */
-    .button-td,
     .button-a {
         transition: all 100ms ease-in;
     }
-    .button-td:hover,
     .button-a:hover {
         background: #E6B303 !important;
         border-color: #E6B303 !important;
@@ -162,7 +160,7 @@
                         <img src="https://footgod.s3.amazonaws.com/images/email/footgod-logo.png" width="200" height="50" alt="alt_text" border="0" style="width: 100%; height: auto;">
                     </td>
                     <td style="padding: 0 10px 0 0;" align="right">
-                        <p style="font-size: 13px; color: #7f8c9d;">Tracking Number: {trackingnumber}</p>
+                        <p style="font-size: 13px; color: #7f8c9d;"><strong>Questions?</strong> hello@footgod.com</p>
                     </td>
                 </tr>
             </table>
@@ -189,14 +187,22 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="padding: 0 10px; font-size: 15px; line-height: 140%;">
+                                <td style="padding: 0 10px; font-size: 15px; line-height: 140%;" width="100%">
                                     <!-- Button : BEGIN -->
-                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 !important;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 !important;" width="100%">
                                         <tr>
-                                            <td style="border-radius: 3px; background: #FFC80A; text-align: center;" class="button-td">
-                                                <a href="https://tools.usps.com/go/TrackConfirmAction?tLabels=" style="background: #FFC80A; border: 15px solid #FFC80A; font-family: sans-serif; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 4px; font-weight: bold; font-size: 15px;" class="button-a" target="_blank">
-                                                    <span style="color: #696969;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;Track your package &raquo;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <td class="button-td" width="50%">
+                                                <a href="https://tools.usps.com/go/TrackConfirmAction?tLabels=" style="background: #FFC80A; border: 15px solid #FFC80A; font-family: sans-serif; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 4px; font-weight: bold; font-size: 15px; width: 70%;" class="button-a" target="_blank">
+                                                    <span style="color: #696969;" class="button-link">Track your package &raquo;</span>
                                                 </a>
+                                                <p style="margin: 10px 0 0 0; color: #7f8c9d;">Tracking number: {trackingnumber}</p>
+                                            </td>
+                                            <td style="font-size: 15px; line-height: 140%; color: #555555; text-align: right;" class="stack-column-center" width="50%">
+                                                <p style="margin: 0; color: #7f8c9d; font-size: 13px;"><strong>Shipped To:</strong><br />
+                                                {shippingfirstname} {shippinglastname}<br />
+                                                {shippingaddress} {shippingaddress2}<br />
+                                                {shippingcity}, {shippingstate} {shippingzipcode}<br />
+                                                {shippingcountry}</p>
                                             </td>
                                         </tr>
                                     </table>
@@ -204,12 +210,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="padding: 5px 0 10px 10px;font-size: 14px; line-height: 140%;">
-                                    <p style="margin: 10px 0 0 0; color: #7f8c9d;">Tracking number: {trackingnumber}</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
+                                <td style="padding: 30px 10px 10px 10px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
                                     <h2 style="margin: 0 0 10px 0;font-size: 18px; line-height: 125%; font-weight: bold;">Here is what we shipped:</h2>
                                      <p style="margin: 0; color: #7f8c9d; ont-size: 15px;">Order Number: {orderid}</p>
                                 </td>
@@ -238,8 +239,13 @@
                                         <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt; width: 100%;">
                                             <tbody>
                                                 <tr style="background-color:#f9f9f9;">
-                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left; width: 100%" valign="middle">
-                                                        &nbsp;&nbsp;&nbsp;Item</td>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" width="145" valign="middle">
+                                                        &nbsp;&nbsp;&nbsp;<strong>Item</strong>
+                                                    </td>
+                                                     <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;" valign="middle" width="189">
+                                                        <strong>Description</strong></td>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px; text-align: center;" valign="middle" width="189">
+                                                        <strong>Qty</strong></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -247,13 +253,15 @@
                                             <tbody>
                                                 <!--
                                                 {tpl_product_row}
-                                                <tr>
-                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;text-align: left;" valign="middle" width="100">
+                                                <tr style="border-bottom: solid 1px #ccc">
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;padding-bottom: 20px;" valign="middle" width="135">
                                                         <img align="middle" alt="" border="0" height="100" hspace="0" src="https://footgod.s3.amazonaws.com/images/ll-products/footgod-{tpl_product_id}.jpg" style="display: block;text-decoration: none;border: none; padding: 10px 0 0 0;" vspace="0"/>
                                                     </td>
-                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 13px;" valign="middle">
-                                                        <p style="margin-bottom: 20px; font-size: 15px;">{tpl_product_name}</p>
-                                                        <p style="font-size: 15px;">Qty: {tpl_product_quantity}</p>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 15px; font-weight: bold;" valign="middle" width="189">
+                                                        {tpl_product_name}
+                                                    </td>
+                                                    <td class="invReg" height="25" style="color: #7f8c9d;font-family: sans-serif;font-size: 15px;text-align: center;font-weight: bold;" valign="middle" width="189">
+                                                        {tpl_product_quantity}
                                                     </td>
                                                 </tr>
                                                 {tpl_product_row} 
@@ -267,31 +275,7 @@
                     </td>
                 </tr>
 
-                <!-- 2 Even Columns : BEGIN -->
-                <tr>
-                    <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 0 10px 20px 10px;">
-                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
-                            <tr>
-                                <td align="center" valign="top" width="50%">
-                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
-                                        <tr>
-                                            <td style="font-size: 15px; line-height: 140%; color: #555555;" class="stack-column-center">
-                                                <p style="margin: 0; color: #7f8c9d; font-size: 13px;"><strong>Sent To:</strong><br />
-                                                {shippingfirstname} {shippinglastname}<br />
-                                                {shippingaddress} {shippingaddress2}<br />
-                                                {shippingcity}, {shippingstate} {shippingzipcode}<br />
-                                                {shippingcountry}</p>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- Two Even Columns : END -->
-
-                 <!--cx section-->
+                <!--cx section-->
                 <tr>
                     <td bgcolor="#ffffff" style="padding: 10px; font-family: sans-serif; font-size: 13px; line-height: 140%; text-align: center; border-top: solid 3px #BD892D">
                         <h1 style="margin: 0 0 5px 0; font-family: sans-serif; font-size: 18px; line-height: 125%; font-weight: bold;">Have questions or need help with your purchase?</h1>
