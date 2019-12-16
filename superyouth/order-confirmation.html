@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- Tell iOS not to automatically link certain text strings. -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            font-family: Century Gothic, Trebuchet MS, Geneva, Helvetica, Verdana, Arial, sans-serif;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        a[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links a,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+
+        /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+        .im {
+            color: inherit !important;
+        }
+
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+        /*.subtotals::before {
+            content: "";
+            background: #eee;
+            height: 60px;
+            width: 1px;
+            position: absolute;
+            left: -15px;
+            top: 10px;
+        }*/
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+    </style>
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+       /* .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td-primary:hover,
+        .button-a-primary:hover {
+            background: #555555 !important;
+            border-color: #555555 !important;
+        }*/
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            /* What it does: Adjust typography on small screens to improve readability */
+            .email-container p {
+                font-size: 13px !important;
+            }
+
+        }
+
+    </style>
+    <!-- Progressive Enhancements : END -->
+
+</head>
+<!--
+    The email background color (#222222) is defined in three places:
+    1. body tag: for most email clients
+    2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+    3. mso conditional: For Windows 10 Mail
+-->
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+    <center style="width: 100%; background-color: #eee;">
+    <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
+    <tr>
+    <td>
+    <![endif]-->
+
+        <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+            <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <!-- Email Body : BEGIN -->
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+                <!-- Email Header : BEGIN -->
+                <!-- 2 Even Columns : BEGIN -->
+                <tr>
+                    <td style="padding: 20px 10px; background-color: #ffffff;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td>
+                                                <img src="https://superyouth.s3.amazonaws.com/SY_Website_Lander_Header_Logo_Yellow.png" width="200" height="" alt="alt_text" border="0" style="width: 100%; max-width: 200px;"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: right; font-size: 15px; line-height: 20px; color: #555555;">
+                                                <p style="margin: 0;">Order Number: {{orderid}}</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Two Even Columns : END -->
+                <!-- Email Header : END -->
+
+                <!-- Hero Image, Flush : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff;">
+                        <img src="https://superyouth.s3.amazonaws.com/emails/order-conf/bestisyettocome.png" width="600" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;" class="g-img">
+                    </td>
+                </tr>
+                <!-- Hero Image, Flush : END -->
+
+                <!-- 1 Column Text + Button : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 20px 10px 0 10px; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h1 style="margin: 0 0 10px 0; font-size: 18px; line-height: 30px; color: #333333; font-weight: normal;">Hello {{shippingfirstname}},</h1>
+                                    <p style="margin: 0;">Your order is confirmed: {{orderid}}! Get ready to take the guesswork out of daily wellness, and experience a difference you'll see and feel.</p>
+                                </td>
+                            </tr>
+                    
+                            <tr>
+                                <td style="padding: 20px 10px 0 10px; line-height: 20px; color: #555555;">
+                                    <h3 style="margin: 0 0 10px 0; font-size: 15px; color: #555;">HERE IS WHAT YOU ORDERED:</h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text + Button : END -->
+
+                <!-- 2 Even Columns : BEGIN -->
+                <tr>
+                    <td style="padding: 0 10px 15px 10px; background-color: #ffffff;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; line-height: 20px; color: #555555;">
+                                               <p style="margin: 0; border-bottom: solid 1px #feb81c; width: 75%;">BILLED TO:</p>
+                                                <p style="margin: 0;">
+                                                    {{billingfirstname}} {{billinglastname}}<br/>
+                                                    {{billingaddress}} {{billingaddress2}}<br/>
+                                                    {{billingcity}}, {{billingstate}} {{billingzipcode}}<br/>
+                                                    {{billingcountry}}
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; line-height: 20px; color: #555555;">
+                                                <p style="margin: 0; border-bottom: solid 1px #feb81c; width: 75%">SHIPPED TO:</p>
+                                                <p style="margin: 0;">
+                                                    {{shippingfirstname}} {{shippinglastname}}<br/>
+                                                    {{shippingaddress}} {{shippingaddress2}}<br/>
+                                                    {{shippingcity}}, {{shippingstate}} {{shippingzipcode}}<br/>
+                                                    {{shippingcountry}}
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Two Even Columns : END -->
+
+               <tr>
+                    <td bgcolor="#ffffff" style="padding: 0 10px 15px 10px;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="table608" style="mso-table-lspace:0pt;mso-table-rspace:0pt;" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="10" style="font-size:0;line-height:0;">
+                                                                         </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--= PRODUCT GROUP (you can copy and paste the entire section to duplicate)=--> 
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt; width: 100%;">
+                                                            <tbody>
+                                                                <tr style="border-top: solid 2px #feb81c; border-bottom: solid 2px #feb81c;">
+                                                                    <td class="invReg" height="25" style="color: #555; font-size: 13px; text-align: left; padding: 5px 0;" valign="middle" width="25%">
+                                                                        PRODUCT
+                                                                    </td>
+                                                                    <td class="invReg" height="25" style="color: #555; font-size: 13px; text-align: left;" valign="middle" width="40%">
+                                                                        PRODUCT NAME
+                                                                    </td>
+                                                                   <!--  <td class="wz" width="5%">
+                                                                         
+                                                                    </td> -->
+                                                                        <td class="invReg" height="25" style="color: #555; font-size: 13px; text-align: center;" valign="middle" width="15%">
+                                                                        QTY
+                                                                    </td>
+                                                                    <!-- <td class="wz" width="20">
+                                                                         
+                                                                    </td> -->
+                                                                    <td class="invReg" height="25" style="color: #555; font-size: 13px; text-align: right;" valign="middle" width="20%">
+                                                                        PRICE
+                                                                    </td>
+                                                                </tr>
+                                                                {{#each products}}
+                                                                <tr style="border-bottom: solid 1px #eee;">
+                                                                    <td class="invReg" height="25" style="color: #555; text-align: left; padding: 5px 0;" valign="top" width="25%">
+                                                                        <img align="middle" alt="" border="0" hspace="0" src="{{this.productImage}}" style="width: 100%; max-width: 70px; margin-top: 5px;" vspace="0"/>
+                                                                       
+                                                                    </td>
+                                                                    <td class="invReg" height="25" style="color: #555; text-align: left;" valign="middle" width="40%">
+                                                                        <p style="font-size: 15px; margin: 5px 0;"><strong>{{this.productName}}</strong></p>
+                                                                    </td>
+                                                                     <td class="invReg" height="25" style="color: #555; text-align: center;" valign="middle" width="15%">
+                                                                        <p style="font-size: 13px; margin: 0;">{{this.productQuantity}}</p>
+                                                                    </td>
+                                                                    <td class="invReg" height="25" style="color: #555; text-align: right;" valign="middle" width="20%">
+                                                                        <p>${{this.productPrice}}</p>
+                                                                    </td>
+                                                                </tr>
+                                                                {{/each}}
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- 2 Even Columns : BEGIN -->
+                <tr>
+                    <td style="padding: 0 10px 5px 10px; background-color: #ffffff;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" width="60%" style="border-bottom: solid 1px #eee; padding-bottom: 10px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; line-height: 20px; color: #555555; display: flex;">
+                                                <div>
+                                                    <img src="https://superyouth.s3.amazonaws.com/emails/MBG.png" style="width: 80px; max-width: 80px; margin-right: 10px;"/>
+                                                </div>
+                                                <div>
+                                                    <p style="margin: 0;">
+                                                       Look & Feel your<br/>
+                                                       best, or its on us.<br/>
+                                                       Call us anytime at<br/>
+                                                       <a href="tel:18883096884" style="color: #feb81c; text-decoration: underline;">1-888-309-6884</a>
+                                                    </p>
+                                                </div>    
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="40%" style="border-bottom: solid 1px #eee; padding-bottom: 10px; position: relative;" class="subtotals">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; line-height: 20px; color: #555555;">
+                                                <p style="margin: 0 0 5px 0;">Subtotal:  <span style="float: right;">${{subtotal}}</span></p>
+                                                <p style="margin: 0 0 10px 0;">Shipping: <span style="float: right;">${{shippingprice}}</span></p>
+                                                <p style="margin: 0; border-top: solid 1px #feb81c; padding-top: 5px;">Total: <span style="float: right;">${{ordertotal}}</span></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Two Even Columns : END -->
+
+                <!-- 1 Column Text : BEGIN -->
+                {{#if isSubscription}}
+                <tr>
+                    <td style="background-color: #ffffff;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 15px 10px; color: #555555; line-height: 22px; font-size: 14px;">
+                                    <p style="margin: 0;">Your Super Youth subscription will be shipped to you every 30 days at a {{savingsPercentage}}% discount, for only <b>${{renewalPrice}} (plus $9.95 shipping)</b>. Easily change or cancel at any time by calling us at 1-888-309-6884 or emailing us at hello@superyouth.com.
+                                    <br/>
+                                    <br/>
+                                    <b>90 Day Money Back Guarantee</b> - Look & feel your best, or it's on us.
+                                    <br/>
+                                    <br/>
+                                  <!--   Your subscription will renew on <b>{{subscriptionDate}}</b> for <b>${{recurringTotal}}</b>
+                                    <br/>
+                                    <br/> -->
+                                    Thank you,<br/>
+                                    <b>Super Youth</b>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                {{/if}}
+                <!-- 1 Column Text : END -->
+
+            </table>
+            <!-- Email Body : END -->
+
+            <!-- Email Footer : BEGIN -->
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#e8e8e8" style="margin: auto; font-size: 13px;">
+                <tr>
+                    <td style="text-align: center; color: #636468;">
+                         <div style="background: rgb(203,152,102); 
+                background: linear-gradient(90deg, rgba(203,152,102,1) 0%, rgba(252,236,171,1) 30%, rgba(237,198,105,1) 60%, rgba(180,131,67,1) 100%);
+                height: 4px;"> </div>
+                        <div style="display: flex; margin-top: 15px; width: 15%; margin: 15px auto 0 auto;">
+                            <a href="https://www.facebook.com/superyouth/" target="_blank" style="border-bottom: solid 1px gold; padding-bottom: 5px;">
+                                <img src="https://superyouth.s3.amazonaws.com/emails/fb-icon.png" style="width: 35px; margin-right: 15px;"/>
+                            </a>
+                            <a href="https://www.instagram.com/superyouth/" target="_blank" style="border-bottom: solid 1px gold; padding-bottom: 5px;">
+                                <img src="https://superyouth.s3.amazonaws.com/emails/ig-icon.png" style="width: 35px;"/>
+                            </a>   
+                        </div>
+                        <p style="margin: 10px 0 10px 0">HAVE QUESTIONS OR NEED HELP WITH YOUR PURCHASE?</p>
+                        <p style="margin: 0 0 10px 0">Phone: <a href="tel:18883096884" style="color: #636468; text-decoration: underline;">1-888-309-6884</a> 
+                            | Email: <a href="mailto:hello@superyouth.com" style="color: #636468; text-decoration: underline;">hello@superyouth.com</a></p>
+                        <p style="margin: 0 0 10px 0">© Super Youth, <em>All rights reserved</em>.</p>
+                        <p style="margin: 0 0 10px 0">11551 E. 45th Avenue Unit C, Denver, CO 80239</p>
+                        <p style="margin: 0 0 10px 0"><a href="https://superyouth.com/terms-conditions" style="color: #636468; text-decoration: underline;">Terms & Conditions</a> 
+                            | <a href="https://superyouth.com/privacy-policy" style="color: #636468; text-decoration: underline;">Privacy Policy</a></p>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </center>
+</body>
+</html>
