@@ -212,7 +212,7 @@
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
                                             <td>
-                                                <img src="https://skinnyfit-com-cdn.s3.amazonaws.com/images/emails/sf-pink-logo.jpg" width="200" height="" alt="alt_text" border="0" style="width: 100%; max-width: 200px;"/>
+                                                <img src="https://superyouth.s3.amazonaws.com/SY_Website_Lander_Header_Logo_Yellow.png" width="200" height="" alt="alt_text" border="0" style="width: 100%; max-width: 200px;"/>
                                             </td>
                                         </tr>
                                     </table>
@@ -236,7 +236,7 @@
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                     <td style="background-color: #ffffff;">
-                        <img src="http://skinnyfit.s3.amazonaws.com/images/email-headers/evergreen/order-confirmation/order_confirmation_header-min.jpg" width="600" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;" class="g-img">
+                        <img src="https://superyouth.s3.amazonaws.com/emails/order-conf/bestisyettocome.png" width="600" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;" class="g-img">
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
@@ -249,6 +249,7 @@
                                 <td style="padding: 20px 10px 0 10px; font-size: 15px; line-height: 20px; color: #555555;">
                                     <h1 style="margin: 0 0 10px 0; font-size: 18px; line-height: 30px; color: #333333; font-weight: normal;">Hello {{shippingfirstname}},</h1>
                                     <p style="margin: 0;">Your order is confirmed: {{orderid}}! Get ready to take the guesswork out of daily wellness, and experience a difference you'll see and feel.</p>
+                                    <h1 style="margin: 0 0 10px 0; font-size: 18px; line-height: 30px; color: #333333; font-weight: normal;">WOOOOOF!</h1>
                                 </td>
                             </tr>
                     
@@ -271,7 +272,7 @@
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
                                             <td style="text-align: left; line-height: 20px; color: #555555;">
-                                               <p style="margin: 0; border-bottom: solid 1px #e71791; width: 75%;">BILLED TO:</p>
+                                               <p style="margin: 0; border-bottom: solid 1px #feb81c; width: 75%;">BILLED TO:</p>
                                                 <p style="margin: 0;">
                                                     {{billingfirstname}} {{billinglastname}}<br/>
                                                     {{billingaddress}} {{billingaddress2}}<br/>
@@ -286,7 +287,7 @@
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
                                             <td style="text-align: left; line-height: 20px; color: #555555;">
-                                                <p style="margin: 0; border-bottom: solid 1px #e71791; width: 75%">SHIPPED TO:</p>
+                                                <p style="margin: 0; border-bottom: solid 1px #feb81c; width: 75%">SHIPPED TO:</p>
                                                 <p style="margin: 0;">
                                                     {{shippingfirstname}} {{shippinglastname}}<br/>
                                                     {{shippingaddress}} {{shippingaddress2}}<br/>
@@ -324,7 +325,7 @@
                                                         <!--= PRODUCT GROUP (you can copy and paste the entire section to duplicate)=--> 
                                                         <table align="center" border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt; width: 100%;">
                                                             <tbody>
-                                                                <tr style="border-top: solid 2px #e71791; border-bottom: solid 2px #e71791;">
+                                                                <tr style="border-top: solid 2px #feb81c; border-bottom: solid 2px #feb81c;">
                                                                     <td class="invReg" height="25" style="color: #555; font-size: 13px; text-align: left; padding: 5px 0;" valign="middle" width="25%">
                                                                         PRODUCT
                                                                     </td>
@@ -383,15 +384,17 @@
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
                                             <td style="text-align: left; line-height: 20px; color: #555555; display: flex;">
-                                                <div>
-                                                    <img src="https://skinnyfit-com-cdn.s3.amazonaws.com/images/universal/90mbg.png" style="width: 80px; max-width: 80px; margin-right: 10px;"/>
+                                                <!-- <div>
+                                                    <img src="https://superyouth.s3.amazonaws.com/emails/MBG.png" style="width: 80px; max-width: 80px; margin-right: 10px;"/>
                                                 </div>
                                                 <div>
                                                     <p style="margin: 0;">
-                                                        Love it or call us!<br/>
-                                                        <a href="tel:18883096884" style="color: #e71791; text-decoration: underline;">1-888-862-1758</a>
+                                                       Look & Feel your<br/>
+                                                       best, or its on us.<br/>
+                                                       Call us anytime at<br/>
+                                                       <a href="tel:18883096884" style="color: #feb81c; text-decoration: underline;">1-888-309-6884</a>
                                                     </p>
-                                                </div>    
+                                                </div>     -->
                                             </td>
                                         </tr>
                                     </table>
@@ -401,8 +404,59 @@
                                         <tr>
                                             <td style="text-align: left; line-height: 20px; color: #555555;">
                                                 <p style="margin: 0 0 5px 0;">Subtotal:  <span style="float: right;">${{subtotal}}</span></p>
+                                                {{#if coupondiscount}}
+                                                <p style="margin: 0 0 5px 0; color: #378d37;">Coupon:  <span style="float: right;">${{coupondiscount}}</span></p>
+                                                {{/if}}
                                                 <p style="margin: 0 0 10px 0;">Shipping: <span style="float: right;">${{shippingprice}}</span></p>
-                                                <p style="margin: 0; border-top: solid 1px #e71791; padding-top: 5px;">Total: <span style="float: right;">${{ordertotal}}</span></p>
+                                                <p style="margin: 0; border-top: solid 1px #feb81c; padding-top: 5px;">Total: <span style="float: right;">${{ordertotal}}</span></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+               
+                <tr>
+                    <td style="padding: 5px 10px 0 10px; background-color: #ffffff;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" width="100%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; line-height: 20px; color: #555555;">
+                                               
+                                                     <h3 style="color: #feb81c; margin: 0 0 5px 0; text-align: center;">90 Day Love It Guarantee</h3>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px 10px 0 10px; background-color: #ffffff;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" width="100%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; line-height: 20px; color: #555555; display: flex;">
+                                                <div>
+                                                    <img src="https://superyouth.s3.amazonaws.com/emails/MBG.png" style="width: 101px; max-width: 101px; margin-right: 10px;"/>
+                                                </div>
+                                                <div>
+                                                    <!-- <p style="margin: 0;">
+                                                       Look & Feel your best, or its on us.<br />Call us anytime at 
+                                                       <a href="tel:18883096884" style="color: #feb81c; text-decoration: underline;">1-888-309-6884</a>
+                                                    </p> -->
+                                                    <p style="margin: 0 0 0 0;">We stand behind the quality and effectiveness of our products, and we want you to love them as much as we do! Thats why we offer a <span style="color: #feb81c; font-weight: bold;">90 Day Money Back Guarantee</span></p>
+                                                    <h3 style="margin: 10px 0 0 0;">Love it, or call us!</h3>
+                                                    <!-- <p>If you don't love your experience with any Super Youth product, simply let us know, and we will happily refund your money - even if you send us an empty container.</p> -->
+                                                </div>    
                                             </td>
                                         </tr>
                                     </table>
@@ -419,18 +473,18 @@
                     <td style="background-color: #ffffff;">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 15px 10px; color: #555555; line-height: 22px; font-size: 14px;">
-                                    <p style="margin: 0;">Your SkinnyFit subscription will be shipped to you every 30 days at a {{savingsPercentage}}% discount, for only <b>${{renewalPrice}} (plus $9.95 shipping)</b>. Easily change or cancel at any time by calling us at 1-888-862-1758 or emailing us at hello@skinnyfit.com.
+                                <td style="padding: 5px 10px 15px 10px; color: #555555; line-height: 22px; font-size: 14px;">
+                                    
+                                    <p style="margin: 0;"><span style="font-size: 12px; color: #7f8c9d; line-height: 1.5;">Your Super Youth subscription will be shipped to you every 30 days at a {{savingsPercentage}}% discount, for only ${{renewalPrice}} (plus $9.95 shipping). Easily change or cancel at any time by calling us at 1-888-309-6884 or emailing us at hello@superyouth.com.</span>
+                                    <br/>
+                                    <span style="margin-top: 10px; display: inline-block"><b style="color: #feb81c;">90 Day Money Back Guarantee</b> - Look & feel your best, or it's on us.</span>
                                     <br/>
                                     <br/>
-                                    <b>90 Day Money Back Guarantee</b> - Look & feel your best, or it's on us.
+                                  <!--   Your subscription will renew on <b>{{subscriptionDate}}</b> for <b>${{recurringTotal}}</b>
                                     <br/>
-                                    <br/>
-                                    Your subscription will renew on <b>{{subscriptionDate}}</b> for <b>${{recurringTotal}}</b>
-                                    <br/>
-                                    <br/>
+                                    <br/> -->
                                     Thank you,<br/>
-                                    <b>SkinnyFit</b>
+                                    <b>Superpup</b>
                                     </p>
                                 </td>
                             </tr>
@@ -447,24 +501,24 @@
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#e8e8e8" style="margin: auto; font-size: 13px;">
                 <tr>
                     <td style="text-align: center; color: #636468;">
-<!--                          <div style="background: rgb(203,152,102); 
+                         <div style="background: rgb(203,152,102); 
                 background: linear-gradient(90deg, rgba(203,152,102,1) 0%, rgba(252,236,171,1) 30%, rgba(237,198,105,1) 60%, rgba(180,131,67,1) 100%);
-                height: 4px;"> </div> -->
+                height: 4px;"> </div>
                         <div style="display: flex; margin-top: 15px; width: 15%; margin: 15px auto 0 auto;">
-                            <a href="https://www.facebook.com/SkinnyFit/" target="_blank" style="border-bottom: solid 1px #e71791; padding-bottom: 5px;">
+                            <a href="https://www.facebook.com/superyouth/" target="_blank" style="border-bottom: solid 1px gold; padding-bottom: 5px;">
                                 <img src="https://superyouth.s3.amazonaws.com/emails/fb-icon.png" style="width: 35px; margin-right: 15px;"/>
                             </a>
-                            <a href="https://www.instagram.com/skinnyfit/?hl=en" target="_blank" style="border-bottom: solid 1px #e71791; padding-bottom: 5px;">
+                            <a href="https://www.instagram.com/superyouth/" target="_blank" style="border-bottom: solid 1px gold; padding-bottom: 5px;">
                                 <img src="https://superyouth.s3.amazonaws.com/emails/ig-icon.png" style="width: 35px;"/>
                             </a>   
                         </div>
                         <p style="margin: 10px 0 10px 0">HAVE QUESTIONS OR NEED HELP WITH YOUR PURCHASE?</p>
-                        <p style="margin: 0 0 10px 0">Phone: <a href="tel:18888621758" style="color: #636468; text-decoration: underline;">1-888-862-1758</a> 
-                            | Email: <a href="mailto:hello@skinnyfit.com" style="color: #636468; text-decoration: underline;">hello@skinnyfit.com</a></p>
-                        <p style="margin: 0 0 10px 0">© SkinnyFit, <em>All rights reserved</em>.</p>
+                        <p style="margin: 0 0 10px 0">Phone: <a href="tel:18883096884" style="color: #636468; text-decoration: underline;">1-888-309-6884</a> 
+                            | Email: <a href="mailto:hello@superyouth.com" style="color: #636468; text-decoration: underline;">hello@superyouth.com</a></p>
+                        <p style="margin: 0 0 10px 0">© Super Youth, <em>All rights reserved</em>.</p>
                         <p style="margin: 0 0 10px 0">11551 E. 45th Avenue Unit C, Denver, CO 80239</p>
-                        <p style="margin: 0 0 10px 0"><a href="#" style="color: #636468; text-decoration: underline;">Terms & Conditions</a> 
-                            | <a href="#" style="color: #636468; text-decoration: underline;">Privacy Policy</a></p>
+                        <p style="margin: 0 0 10px 0"><a href="https://superyouth.com/terms-conditions" style="color: #636468; text-decoration: underline;">Terms & Conditions</a> 
+                            | <a href="https://superyouth.com/privacy-policy" style="color: #636468; text-decoration: underline;">Privacy Policy</a></p>
                     </td>
                 </tr>
             </table>

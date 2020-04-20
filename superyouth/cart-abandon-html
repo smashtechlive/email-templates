@@ -1,0 +1,33 @@
+<!-- Full Shopping Cart Begins -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <!-- Cart Labels -->
+          	<thead>
+	<tr style="font-size:12px; color:#777777; font-weight:700; letter-spacing: 2px; padding:10px 10px 10px; margin-right: 20px;">
+		<th align="left" width="25%" style="padding: 10px 0 10px 15px; border-top: solid 2px #FFB81C;  border-bottom: solid 2px #FFB81C;">PRODUCT</th>
+		<th align="left" width="40%" style="padding: 10px 0; border-top: solid 2px #FFB81C;  border-bottom: solid 2px #FFB81C;">NAME</th>
+		<th align="left" width="15%" style="padding: 10px 0; border-top: solid 2px #FFB81C;  border-bottom: solid 2px #FFB81C;">QTY</th>
+		<th align="left" width="20%" style="padding: 10px 0; border-top: solid 2px #FFB81C;  border-bottom: solid 2px #FFB81C;">PRICE</th>
+	</tr>
+	</thead>
+			
+	<tbody>
+	
+	<!-- Cart Labels Ends-->
+            [Cart.Items]
+            <!-- Dynamic Cart Section Starts - Design 1 item and this section will repeat for each item in the cart. -->
+            <!-- Cart Layout -->
+	<tr style="border-bottom: 1px solid #DEDDDD; ">
+		<td style="padding-top: 15px;padding-left: 15px;"><a href="[Root:CartLink," Default Value"]" target="_blank"><!-- Add your relative image url before the image url tag --->
+<img src="[ImageUrl:" Default Value"]" width="100" border="0" style="display:block;" alt="[Title:" Default Value"]"></a></td>
+		<td style="padding-top: 15px;font-size: 15px;">[Title:"Default Value"]</td>
+		<td style="padding-top: 15px;font-size: 15px;">[Quantity:"Default Value"]</td>
+		<td style="padding-top: 15px;font-size: 15px;">[FormatUSD:[LineItemTotal:"Default Value"]]</td>
+		
+			
+	</tr>
+		 <!-- Dynamic Cart Section Ends -->
+            [/Cart.Items]
+	
+	</tbody>		
+	
+</table>
